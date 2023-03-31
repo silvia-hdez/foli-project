@@ -1,11 +1,10 @@
 const mongoose = require('mongoose');
 
-const DB_NAME = 'FoliApp';
+const DB_NAME = 'foli-project';
 const URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017';
 const DB_URI = `${URI}/${DB_NAME}`;
 
-//--- Conexion a la BBDD ---//
-
+// Conexion a la BBDD
 mongoose.connect(DB_URI)
   .then(() => console.info(`Successfully connected to the database ${DB_URI}`))
   .catch((error) => {
@@ -13,7 +12,7 @@ mongoose.connect(DB_URI)
     process.exit(0);
   })
 
-//--- Cierre de la conexión ---//
+// Cierre de la conexión
 
 process.on('SIGINT', () => {
   mongoose.connection.close()
