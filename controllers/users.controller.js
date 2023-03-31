@@ -18,3 +18,17 @@ module.exports.list = (req, res, next) => {
     .then(users => res.json(users))
     .catch(next)
 }
+
+//--- Obtener el usuario por Id ---//
+
+module.exports.getUser = (req, res, next) => {
+  User.findById(req.params.id)
+    .then( user => {
+      if(!user) {
+        next(createError(StatusCodes.NOT_FOUND, 'User not found'))
+      } else {
+        res.json(user)
+      }
+    })
+    .catch(next)
+}

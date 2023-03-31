@@ -55,6 +55,12 @@ const UserSchema = new mongoose.Schema(
   }
 );
 
+//--- Poder validar con teléfono o mail ---//
+
+UserSchema.path('email').validate(function(value) {
+  return value || this.userPhone
+})
+
 //---Se hashea la contraseña antes de que se guarde en la base de datos ---//
 
 UserSchema.pre("save", function (next) {
