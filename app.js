@@ -5,6 +5,7 @@ const logger = require('morgan');
 const mongoose = require('mongoose');
 const createError = require('http-errors');
 const { StatusCodes } = require('http-status-codes');
+const jwt = require('jsonwebtoken')
 
 //--- DB Config ---//
 
@@ -41,7 +42,9 @@ app.use(routes);
             error = createError(StatusCodes.BAD_REQUEST, 'Resource not found')          //Error 400
         } else if (error.message.includes('E11000')) {                                  // Clave duplicada
             error = createError(StatusCodes.BAD_REQUEST, 'Resource already exists')     //Error 400
-        } else if (!error.status) {
+        } else if (error instanceof jwt.JsonWebTokenError) {
+            error = createError(StatusCodes.UNAUTHORIZED, error)                        //Error no autorizado
+        } else if (!error.status) {                                         
             error = createError(StatusCodes.INTERNAL_SERVER_ERROR);                     //Error 500
         }
 
