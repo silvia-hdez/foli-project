@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const createError = require('http-errors');
 const { StatusCodes } = require('http-status-codes');
 const jwt = require('jsonwebtoken')
+const cors = require('cors')
 
 //--- DB Config ---//
 
@@ -14,6 +15,10 @@ require('./config/db.config')
 //--- Config middelware Express ---//
 
 const app = express();
+
+app.use(cors({
+    origin: 'http://localhost:5173',
+  }))
 
 app.use(logger('dev'))
 app.use(express.json())
