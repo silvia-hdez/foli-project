@@ -4,11 +4,11 @@ const usersController = require('../controllers/users.controller');
 
 const authMiddleware = require('../middelwares/auth.middelware');
 
-/* Auth */
+//--- Authentication routes ---//
 
 router.post('/login', authController.login);
 
-/* Users */
+//--- User routes ---//
 
 router.post('/users', usersController.create);
 router.get('/users', usersController.list);

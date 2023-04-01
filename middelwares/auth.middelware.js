@@ -8,8 +8,9 @@ module.exports.isAuthenticated = (req, res, next) => {
   if (!authorization) {
     return next(createError(StatusCodes.UNAUTHORIZED, 'Authorization header was not provided'))
   }
+// console.log (authorization) = Bearer espacio Token
 
-  const [schema, token] = authorization.split(' '); // Deberia haberme llegado Bearer token
+  const [schema, token] = authorization.split(' ');
 
   if (schema !== 'Bearer') {
     return next(createError(StatusCodes.UNAUTHORIZED, 'Authorization schema is not supported'))
@@ -19,9 +20,8 @@ module.exports.isAuthenticated = (req, res, next) => {
     return next(createError(StatusCodes.UNAUTHORIZED, 'A token must be provided'))
   }
 
-  // Me aseguro que tengo schema y tengo token
+  //---Comprobar si tengo schema y token con jwt
 
-  // a comprobarlo con JWT
   const secret = process.env.JWT_SECRET || 'test'
   jwt.verify(token, secret, (err, decodedToken) => {
     if (err) {

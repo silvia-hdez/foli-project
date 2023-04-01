@@ -7,6 +7,8 @@ const ROUNDS = 10;
 const EMAIL_PATTERN =
   /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
+  //--- Montar un schema de mongoose ---//
+
 
 const UserSchema = new mongoose.Schema(
   {
@@ -45,23 +47,29 @@ const UserSchema = new mongoose.Schema(
   }
 )
 
+
+//---Se hashea la contraseña antes de que se guarde en la base de datos ---//
+
 UserSchema.pre('save', function(next) {
   if (this.isModified('password')) {
     bcrypt.hash(this.password, ROUNDS)
       .then(hash => {
-        this.password = hash
+        this.password = hash  //El nuevo valor de la contraseña es el hash resultante (contraseña que se introduce combinada con el número de rondas de cifrado)
         next()
       })
       .catch(next)
-      // .catch(err => next(err))
   } else {
     next()
   }
 })
 
+//--- Comparar la contraseña introducida, con la almacenada en la base de datos ---//
+
 UserSchema.methods.checkPassword = function(passwordToCompare) {
   return bcrypt.compare(passwordToCompare, this.password);
 }
+
+//--- Crear modelo User y exportarlo ---//
 
 const User = mongoose.model('User', UserSchema);
 
