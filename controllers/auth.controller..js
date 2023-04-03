@@ -5,18 +5,29 @@ const jwt = require('jsonwebtoken');
 
 
 module.exports.login = (req, res, next) => {
-  const loginError = createError(StatusCodes.UNAUTHORIZED, 'Email or password incorrect');
-  const { email, password } = req.body
+  const loginError = createError(StatusCodes.UNAUTHORIZED, 'Email, telephone or password incorrect');
+  const { email, password, userPhone } = req.body
 
-  if (!email || !password) {
-    return next(loginError);
+
+  
+  // if (!email || !password || !userPhone) {
+  //   return next(loginError);
+  // }
+  
+
+  //... Check email & telephone
+  let query;
+  if (email) {
+    query = { email };
+  } else {
+    query = { userPhone };
   }
 
-  //... Check email
-  User.findOne({ email })
+  User.findOne(query)
+  
     .then(user => {
       if (!user) {
-        return next(loginError)
+        return next(loginError);
       }
 
  //... Check password

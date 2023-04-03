@@ -1,28 +1,40 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
-const { REQUIRED_FIELD, INVALID_EMAIL, INVALID_LENGTH } = require('../config/errorMessages');
+const { REQUIRED_FIELD, INVALID_EMAIL, INVALID_LENGTH, INVALID_PHONE } = require('../config/errorMessages');
 
 const ROUNDS = 10;
 
 const EMAIL_PATTERN =
   /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
+const PHONE_REGEX = /^\+?[0-9]{9,15}$/
+
   //--- Montar un schema de mongoose ---//
 
 
 const UserSchema = new mongoose.Schema(
   {
-    firstName: {
+    fullName: {
       type: String,
-      required: [true, REQUIRED_FIELD]
     },
-    lastName: {
+    userName: {
       type: String,
-      required: [true, REQUIRED_FIELD]
+      required: [true, REQUIRED_FIELD],
+      unique: true
+    },
+    userPhone: {
+      type: String,
+      required: [function () {
+        return !this.email}, REQUIRED_FIELD],
+      match: [PHONE_REGEX, INVALID_PHONE],
+      minlength: [9, INVALID_LENGTH],
+      trim: true,
+      unique: true
     },
     email: {
       type: String,
-      required: [true, REQUIRED_FIELD],
+      required: [function () {
+        return !this.phone}, REQUIRED_FIELD],
       match: [EMAIL_PATTERN, INVALID_EMAIL],
       trim: true,
       lowercase: true,
@@ -47,6 +59,20 @@ const UserSchema = new mongoose.Schema(
   }
 )
 
+UserSchema.virtual('posts', {
+  ref: 'PostPlant',
+  foreignField: 'userPost',
+  localField: '_id',
+  justOne: false
+})
+
+UserSchema.path('email').validate(function (value) {
+  return value || this.userPhone;
+});
+
+UserSchema.path('userPhone').validate(function (value) {
+  return value || this.email;
+});
 
 //---Se hashea la contraseña antes de que se guarde en la base de datos ---//
 

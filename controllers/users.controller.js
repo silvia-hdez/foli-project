@@ -5,8 +5,8 @@ const { StatusCodes } = require('http-status-codes');
 //--- Crear usuario ---//
 
 module.exports.create = (req, res, next) => {
-  const { email, password, firstName, lastName } = req.body;
-  User.create({ email, password, firstName, lastName })
+  const { email, password, fullName, userName, userPhone } = req.body;
+  User.create({ email, password, fullName, userName, userPhone })
     .then(userCreated => {
       res.status(StatusCodes.CREATED).json(userCreated);
     })
@@ -39,6 +39,7 @@ module.exports.getUser = (req, res, next) => {
 
 module.exports.getCurrentUser = (req, res, next) => {
   User.findById(req.currentUserId)
+    .populate('posts')
     .then(user => {
       if (!user) {
         next(createError(StatusCodes.NOT_FOUND, 'User not found'))
