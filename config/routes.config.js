@@ -17,16 +17,15 @@ router.post('/login', authController.login);
 router.post('/users', usersController.create);
 router.get('/users', usersController.list);
 router.get('/users/me', authMiddleware.isAuthenticated, usersController.getCurrentUser);
-router.get('/users/:id', usersController.getUser);
+router.get('/users/:id', authMiddleware.isAuthenticated, usersController.getUser);
 
 //--- Plants routes ---//
-router.post('/plants', plantsController.createPlants)
-router.get('/plants', plantsController.getAllPlants)
+router.get('/plants', authMiddleware.isAuthenticated, plantsController.getAllPlants)
 
 //--- Post routes ---//
-router.post('/users/me/new-post', authMiddleware.isAuthenticated, postController.create)
-router.get('/users/me/posts', authMiddleware.isAuthenticated, postController.listPosts)
-router.get('/users/me/my-posts', authMiddleware.isAuthenticated, postController.listMyPosts)
-router.get("/users/me/posts/:id", authMiddleware.isAuthenticated, postController.detailPost)
+router.post('/new-post', authMiddleware.isAuthenticated, postController.create)
+router.get('/posts', authMiddleware.isAuthenticated, postController.listPosts)
+router.get('/my-posts', authMiddleware.isAuthenticated, postController.listMyPosts)
+router.get("/posts/:id", authMiddleware.isAuthenticated, postController.detailPost)
 
 module.exports = router;

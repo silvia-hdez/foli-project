@@ -31,15 +31,15 @@ const getRandomPlants = () => {
 
     while (ids.length < PLANTS_LIMIT) {
       const randomId = getRandomPlantId(total);
-
+      
       if (!ids.includes(randomId)) {
         ids.push(randomId);
       }
-      //console.log('RandomId: ', ids)
+      console.log('RandomId: ', ids)
     }
 
-    const plantDetail = ids.map((id) => {
-      return http.get(`/details/${id}`, {
+  const plantDetail = ids.map((id) => {
+  return http.get(`/species/details/${id}`, {
         params: {
           key: apiKey,
         },
@@ -50,20 +50,12 @@ const getRandomPlants = () => {
 
 
     
-    return Promise.all(plantDetail);
-
-  
+  return Promise.all(plantDetail);
 
   });
 };
 
-getRandomPlants()
-.then((plants) => {
-  console.log(plants);
-})
-.catch((err) => console.error(err));
-
-
+module.exports = { getRandomPlants }
 
 
     // Ya tengo el array de ids
@@ -72,6 +64,8 @@ getRandomPlants()
     // Con esa info me monto el objeto guay
     // Plant.create(objetoGuay)
 
-
-
-g
+  //   Plant.create(plant)
+  //   .then(plantCreated => {
+  //       res.status(StatusCodes.CREATED).json(plantCreated);
+  //   })
+  //  .catch (next)
