@@ -19,3 +19,5 @@ module.exports.detailPlant = (req, res, next) => {
     })
     .catch(next);
 };
+
+

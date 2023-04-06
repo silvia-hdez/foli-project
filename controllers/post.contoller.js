@@ -15,21 +15,22 @@ module.exports.create = (req, res, next) => {
 //---Obtener listado posts---//
 
 module.exports.listPosts = (req, res, next) => {
-    PostPlant.find()
+    const userId = req.currentUserId;
+    PostPlant.find({userPost: {$ne: userId}})
         .then(posts => {
             res.json(posts)
         })
         .catch(next)
 }   
 
-// module.exports.listMyPosts = (req, res, next) => {
-//     const userId = req.currentUserId;
-//     PostPlant.find({ userPost: userId })
-//         .then(posts => {
-//             res.json(posts)
-//         })
-//         .catch(next)
-// }
+module.exports.listMyPosts = (req, res, next) => {
+    const userId = req.currentUserId;
+    PostPlant.find({ userPost: userId })
+        .then(posts => {
+            res.json(posts)
+        })
+        .catch(next)
+}
 
 //---Detalle del post---//
 module.exports.detailPost = (req, res, next) => {
@@ -52,6 +53,12 @@ module.exports.delete = (req, res, next) => {
 }
 
 //---Editar post---//
-// module.exports.edit = (req, res, next) => {
-
-// }
+module.exports.edit = (req, res, next) => {
+    const updates = {name: req.body.name}
+    console.log(updates)
+    PostPlant.findByIdAndUpdate(req.params.id, updates)
+        .then(()=>{
+            res.send('Post actualizado');
+        })
+        .catch(next)
+}
