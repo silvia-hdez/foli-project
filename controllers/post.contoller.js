@@ -22,14 +22,14 @@ module.exports.listPosts = (req, res, next) => {
         .catch(next)
 }   
 
-module.exports.listMyPosts = (req, res, next) => {
-    const userId = req.currentUserId;
-    PostPlant.find({ userPost: userId })
-        .then(posts => {
-            res.json(posts)
-        })
-        .catch(next)
-}
+// module.exports.listMyPosts = (req, res, next) => {
+//     const userId = req.currentUserId;
+//     PostPlant.find({ userPost: userId })
+//         .then(posts => {
+//             res.json(posts)
+//         })
+//         .catch(next)
+// }
 
 //---Detalle del post---//
 module.exports.detailPost = (req, res, next) => {
@@ -40,3 +40,18 @@ module.exports.detailPost = (req, res, next) => {
         })
         .catch(next)
 }
+
+//---Eliminar post---//
+module.exports.delete = (req, res, next) => {
+    const {id} = req.params
+    PostPlant.findByIdAndDelete(id)
+        .then(()=>{
+            
+        })
+        .catch(next)
+}
+
+//---Editar post---//
+// module.exports.edit = (req, res, next) => {
+
+// }

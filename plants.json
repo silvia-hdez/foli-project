@@ -8018,4 +8018,2415 @@
   "fruits": true,
   "cuisine": false,
   "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664005"
+  },
+  "commonName": "Japanese holly",
+  "scientificName": [
+    "Ilex crenata 'Hetzii'"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/4213_ilex_crenata_hetzii/medium/36261307750_a4ae6d14cb_b.jpg",
+  "family": "Aquifoliaceae",
+  "origin": [
+    "Sakhalin Island",
+    "Japan",
+    "Korea"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Softwood Cuttings",
+    "Hardwood Cuttings"
+  ],
+  "sunlight": [
+    "Filtered shade",
+    " Full sun"
+  ],
+  "soil": [
+    "Acidic",
+    " Well-drained"
+  ],
+  "growthRate": "Moderate",
+  "droughtTolerant": false,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664006"
+  },
+  "commonName": "oriental lily",
+  "scientificName": [
+    "Lilium 'Dolce Vita'"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Liliaceae",
+  "origin": [
+    "Japan"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Bulb Division",
+    "Seed Propagation",
+    "Offsets",
+    "Grafting Propagation",
+    "Tissue Culture"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664007"
+  },
+  "commonName": "ornamental pepper",
+  "scientificName": [
+    "Capsicum annuum 'Black Pearl'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Solanaceae",
+  "origin": [
+    "Mexico"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Seed Propagation",
+    "Cutting",
+    "Layering Propagation",
+    "Division",
+    "Grafting Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": true,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766400a"
+  },
+  "commonName": "coral bells",
+  "scientificName": [
+    "Heuchera 'Vesuvius'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/3752_heuchera_vesuvius/medium/52334767830_64b85b2d5e_b.jpg",
+  "family": "Saxifragaceae",
+  "origin": [
+    "United States"
+  ],
+  "attracts": [
+    "Hummingbirds"
+  ],
+  "propagation": [
+    "Division",
+    "Cutting",
+    "Seed Propagation",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": false,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766400b"
+  },
+  "commonName": "Braeburn Apple",
+  "scientificName": [
+    "Malus 'Braeburn'"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/354_malus_braeburn/medium/26257641106_44b6973b16_b.jpg",
+  "family": "Rosaceae",
+  "origin": [
+    "New Zealand",
+    "Australia",
+    "United States"
+  ],
+  "attracts": [
+    "Birds",
+    " Hummingbirds",
+    " Butterflies"
+  ],
+  "propagation": [
+    "Grafting Propagation",
+    "Budding",
+    "T budding",
+    "Chip Budding",
+    "Air Layering Propagation",
+    "Cutting"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "High",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766400c"
+  },
+  "commonName": "edelweiss",
+  "scientificName": [
+    "Leontopodium alpinum"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/4732_leontopodium_alpinum/medium/44593878672_f926fa797f_b.jpg",
+  "family": "Asteraceae",
+  "origin": [
+    "Southern Europe"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Seed Propagation",
+    "Division",
+    "Cutting",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": false,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766400d"
+  },
+  "commonName": "bishop's weed",
+  "scientificName": [
+    "Aegopodium podagraria 'Variegatum'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Minimum",
+  "family": "Apiaceae",
+  "origin": [
+    "Europe",
+    "Garden origin"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Division"
+  ],
+  "sunlight": [
+    "full sun",
+    "part shade"
+  ],
+  "soil": [
+    "Acidic",
+    " Humus rich",
+    " Rocky ",
+    " gravelly ",
+    " dry",
+    " Well-drained"
+  ],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": true,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766400e"
+  },
+  "commonName": "strawflower",
+  "scientificName": [
+    "Helichrysum heldreichii"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Minimum",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Asteraceae",
+  "origin": [
+    "Crete"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Seed Propagation",
+    "Cutting",
+    "Division"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766400f"
+  },
+  "commonName": "mountain rockcress",
+  "scientificName": [
+    "Arabis alpina subsp. caucasica 'Schneehaube' SNOWCAP"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Minimum",
+  "image": "https://perenual.com/storage/species_image/907_arabis_alpina_subsp_caucasica_schneehaube_snowcap/medium/Arabis_alpina_a3.jpg",
+  "family": "Brassicaceae",
+  "origin": [
+    "Europe",
+    "central Africa",
+    "northern Asia",
+    "North America"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Seed Propagation",
+    "Cutting",
+    "Division",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Sun"
+  ],
+  "soil": [
+    "Sand"
+  ],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664008"
+  },
+  "commonName": "lily turf",
+  "scientificName": [
+    "Liriope muscari 'Royal Purple'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Asparagaceae",
+  "origin": [
+    "Japan"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Division",
+    "Seed Propagation",
+    "Planting plugs",
+    "Layering Propagation",
+    "Splitting"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": true,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664011"
+  },
+  "commonName": "beardtongue",
+  "scientificName": [
+    "Penstemon 'Red Rocks'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Minimum",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Plantaginaceae",
+  "origin": [
+    "United States"
+  ],
+  "attracts": [
+    "Hummingbirds",
+    " Butterflies"
+  ],
+  "propagation": [
+    "Cutting",
+    "Division",
+    "Layering Propagation",
+    "Seed Propagation",
+    "Grafting Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664012"
+  },
+  "commonName": "lantana",
+  "scientificName": [
+    "Lantana camara 'Ballucream' LITTLE LUCKY LEMON CREAM"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Verbenaceae",
+  "origin": [
+    "Mexico",
+    "Central America",
+    "South America",
+    "Caribbean Islands"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Cutting",
+    "Layering Propagation",
+    "Division",
+    "Grafting Propagation",
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664013"
+  },
+  "commonName": "Siberian iris",
+  "scientificName": [
+    "Iris 'Lady of Quality'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Frequent",
+  "image": "https://perenual.com/storage/species_image/4414_iris_sparkle/medium/52138163107_7045290af6_b.jpg",
+  "family": "Iridaceae",
+  "origin": [
+    "Russia",
+    "Japan",
+    "China",
+    "Korea"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Division",
+    "Corms",
+    "Seed Propagation",
+    "Cutting"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664014"
+  },
+  "commonName": "sedge",
+  "scientificName": [
+    "Carex conica 'Snowline'"
+  ],
+  "cycle": "Perennial",
+  "watering": "Frequent",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Cyperaceae",
+  "origin": [
+    "S.E. Asia",
+    "Japan",
+    "China (Japan"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Division"
+  ],
+  "sunlight": [
+    "Part shade",
+    "full shade"
+  ],
+  "soil": [
+    "Well-drained"
+  ],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664009"
+  },
+  "commonName": "garden phlox",
+  "scientificName": [
+    "Phlox paniculata 'Eden's Crush'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/5904_phlox_paniculata_edens_crush/medium/2560px-Phlox_paniculata_-_Giardino_d27Europa_De_Gasperi_2.jpg",
+  "family": "Polemoniaceae",
+  "origin": [
+    "Eastern United States"
+  ],
+  "attracts": [
+    "Birds",
+    " Hummingbirds",
+    " Butterflies"
+  ],
+  "propagation": [
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    " Part sun/part shade"
+  ],
+  "soil": [
+    "Rocky ",
+    " gravelly ",
+    " dry",
+    " Well-drained"
+  ],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664016"
+  },
+  "commonName": "carnation",
+  "scientificName": [
+    "Dianthus caryophyllus 'Vienna Mischung'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Caryophyllaceae",
+  "origin": [
+    "Europe"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Seed Propagation",
+    "Division",
+    "Cutting",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [
+    "Alkaline",
+    " Rocky ",
+    " gravelly ",
+    " dry",
+    " Well-drained"
+  ],
+  "growthRate": "Moderate",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664017"
+  },
+  "commonName": "columbine",
+  "scientificName": [
+    "Aquilegia canadensis 'Little Lanterns'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Minimum",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Ranunculaceae",
+  "origin": [
+    "Eastern North America"
+  ],
+  "attracts": [
+    "Hummingbirds"
+  ],
+  "propagation": [
+    "Seed Propagation",
+    "Division",
+    "Cutting"
+  ],
+  "sunlight": [
+    "Sun",
+    " Partial Shade"
+  ],
+  "soil": [
+    "Sandy Loamy Humus Rocky"
+  ],
+  "growthRate": "Low",
+  "droughtTolerant": false,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664018"
+  },
+  "commonName": "daylily",
+  "scientificName": [
+    "Hemerocallis 'Friend Jack'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/3517_hemerocallis_friend_jack/medium/52238446974_d790e8bcb2_b.jpg",
+  "family": "Asphodelaceae",
+  "origin": [
+    "Japan"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Division",
+    "Seed Propagation",
+    "Tissue Culture",
+    "Grafting Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664019"
+  },
+  "commonName": "purple-fruited chokeberry",
+  "scientificName": [
+    "Aronia prunifolia"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/968_aronia_prunifolia/medium/50352225938_fcc00078d3_b.jpg",
+  "family": "Rosaceae",
+  "origin": [
+    "Eastern North America"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Cutting",
+    "Grafting Propagation",
+    "Layering Propagation",
+    "Tissue Culture",
+    "Air Layering Propagation",
+    "Seed Stratification"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": true,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766401a"
+  },
+  "commonName": "euonymus",
+  "scientificName": [
+    "Euonymus japonicus 'Green Spire'"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2852_euonymus_japonicus_green_spire/medium/7161607935_296f9a7fc6_b.jpg",
+  "family": "Celastraceae",
+  "origin": [
+    "Japan"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Cutting",
+    "Layering Propagation",
+    "Grafting Propagation",
+    "Division",
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766401b"
+  },
+  "commonName": "brazilian joyweed",
+  "scientificName": [
+    "Alternanthera brasiliana 'Purple Prince'"
+  ],
+  "cycle": "Annual",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/745_alternanthera_brasiliana_purple_prince/medium/Alternanthera_dentata_27Brazilian_Red_Hots27.jpg",
+  "family": "Amaranthaceae",
+  "origin": [
+    "Brazil"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Stem Cutting Propagation",
+    "Division",
+    "Layering Propagation",
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766401c"
+  },
+  "commonName": "winter squash",
+  "scientificName": [
+    "Cucurbita maxima"
+  ],
+  "cycle": "Annual",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2253_cucurbita_maxima/medium/35821477330_688f30f50d_b.jpg",
+  "family": "Cucurbitaceae",
+  "origin": [
+    "South America"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    " Part sun/part shade"
+  ],
+  "soil": [
+    "Humus rich",
+    " Well-drained"
+  ],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766401d"
+  },
+  "commonName": "hairy alum root",
+  "scientificName": [
+    "Heuchera villosa 'Brownies'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/3755_heuchera_villosa_brownies/medium/20073079218_821ceaa9f9_b.jpg",
+  "family": "Saxifragaceae",
+  "origin": [
+    "United States"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Division",
+    "Cutting",
+    "Seed Propagation",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766401e"
+  },
+  "commonName": "ice plant",
+  "scientificName": [
+    "Delosperma 'Kelaidis'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Minimum",
+  "image": "https://perenual.com/storage/species_image/2334_delosperma_kelaidis/medium/32892577133_58329e1202_b.jpg",
+  "family": "Aizoaceae",
+  "origin": [
+    "South Africa"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Seed Propagation",
+    "Cutting",
+    "Division",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": true,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766401f"
+  },
+  "commonName": "boxwood",
+  "scientificName": [
+    "Buxus sempervirens 'Appalachian Pyramid'"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Buxaceae",
+  "origin": [
+    "Southern Europe",
+    "western Asia",
+    "northern Africa"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Softwood Cuttings",
+    "Grafting Propagation"
+  ],
+  "sunlight": [
+    "Deep shade",
+    " Filtered shade",
+    " Full sun only if soil kept moist",
+    " Part sun/part shade"
+  ],
+  "soil": [
+    "Alkaline",
+    " Well-drained"
+  ],
+  "growthRate": "Moderate",
+  "droughtTolerant": true,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664010"
+  },
+  "commonName": "tall fescue",
+  "scientificName": [
+    "Festuca arundinacea 'Jaguar 3'"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2939_festuca_arundinacea_jaguar_3/medium/28436473810_85f037800c_b.jpg",
+  "family": "Poaceae",
+  "origin": [
+    "Europe"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Seed Propagation",
+    "Stolons",
+    "Crown Division",
+    "Planting plugs",
+    "Sod"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": true,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664021"
+  },
+  "commonName": "crape myrtle",
+  "scientificName": [
+    "Lagerstroemia indica 'Seminole'"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Lythraceae",
+  "origin": [
+    "India",
+    "China",
+    "Japan",
+    "Korea",
+    "Thailand"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Air Layering Propagation",
+    "Cutting",
+    "Grafting Propagation",
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": false,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664022"
+  },
+  "commonName": "torch ginger",
+  "scientificName": [
+    "Etlingera elatior"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Zingiberaceae",
+  "origin": [
+    "Thailand",
+    "Malesia",
+    "New Guinea"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Division",
+    "Stem Cutting Propagation",
+    "Air Layering Propagation",
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": true,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664023"
+  },
+  "commonName": "purple poppy mallow",
+  "scientificName": [
+    "Callirhoe involucrata"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Minimum",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Malvaceae",
+  "origin": [
+    "Central United States"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Seed Propagation",
+    "Division",
+    "Cutting"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664024"
+  },
+  "commonName": "green arrow arum",
+  "scientificName": [
+    "Peltandra virginica"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Frequent",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Araceae",
+  "origin": [
+    "Eastern and central North America"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Division",
+    "Corms",
+    "Seed Propagation",
+    "Rhizomes",
+    "Stolons"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664025"
+  },
+  "commonName": "hellebore",
+  "scientificName": [
+    "Helleborus hybridus 'White Lady Spotted'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/3441_helleborus_hybridus_white_lady_spotted/medium/52395758392_f7784153de_b.jpg",
+  "family": "Ranunculaceae",
+  "origin": [
+    "Germany",
+    "Austria",
+    "Switzerland",
+    "France",
+    "Italy",
+    "Slovenia",
+    "Croatia"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Division",
+    "Cutting",
+    "Seed Propagation",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Part shade",
+    "full shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664026"
+  },
+  "commonName": "false aster",
+  "scientificName": [
+    "Boltonia asteroides"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/1303_boltonia_asteroides/medium/36561669334_923d643fe2_b.jpg",
+  "family": "Asteraceae",
+  "origin": [
+    "Eastern United States"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Partial Shade"
+  ],
+  "soil": [
+    "Well-drained"
+  ],
+  "growthRate": "High",
+  "droughtTolerant": true,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664015"
+  },
+  "commonName": "Asiatic lily",
+  "scientificName": [
+    "Lilium 'Dreamland'"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Liliaceae",
+  "origin": [
+    "China"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Division",
+    "Seed Propagation",
+    "Bulbils",
+    "Grafting Propagation",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664028"
+  },
+  "commonName": "false indigo",
+  "scientificName": [
+    "Baptisia 'Pink Lemonade' DECADENCE DELUXE"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Minimum",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Fabaceae",
+  "origin": [
+    "United States"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Division",
+    "Cutting",
+    "Seed Propagation",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664029"
+  },
+  "commonName": "brass buttons",
+  "scientificName": [
+    "Leptinella squalida 'Platt's Black'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/4736_leptinella_squalida_platts_black/medium/5597164350_169fd85154_b.jpg",
+  "family": "Asteraceae",
+  "origin": [
+    "New Zealand"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Division",
+    "Seed Propagation",
+    "Cutting",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766402a"
+  },
+  "commonName": "gentian",
+  "scientificName": [
+    "Gentiana acaulis"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Gentianaceae",
+  "origin": [
+    "Europe"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Division",
+    "Cutting",
+    "Seed Propagation",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": false,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766402b"
+  },
+  "commonName": "Swiss chard",
+  "scientificName": [
+    "Beta vulgaris (Leaf Beet Group) 'Bright Lights'"
+  ],
+  "cycle": "Annual",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Amaranthaceae",
+  "origin": [
+    "Switzerland"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Cutting",
+    "Grafting Propagation",
+    "Layering Propagation",
+    "Division",
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766402c"
+  },
+  "commonName": "butterfly bush",
+  "scientificName": [
+    "Buddleja weyeriana 'Honeycomb'"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/1398_buddleja_weyeriana_honeycomb/medium/6086586430_9f78ef1c92_b.jpg",
+  "family": "Scrophulariaceae",
+  "origin": [
+    "China"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Cutting",
+    "Layering Propagation",
+    "Division",
+    "Grafting Propagation",
+    "Stem Cutting Propagation",
+    "Air Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": true,
+  "maintenance": "High",
+  "thorny": false,
+  "invasive": true,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766402d"
+  },
+  "commonName": "royal fern",
+  "scientificName": [
+    "Osmunda regalis"
+  ],
+  "cycle": "Perennial",
+  "watering": "Frequent",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Osmundaceae",
+  "origin": [
+    "Cosmopolitan"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Spore"
+  ],
+  "sunlight": [
+    "Filtered shade",
+    " Full sun only if soil kept moist",
+    " Part sun/part shade"
+  ],
+  "soil": [
+    "Loamy Humus"
+  ],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766402e"
+  },
+  "commonName": "furin-tsutsuji",
+  "scientificName": [
+    "Enkianthus campanulatus"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Ericaceae",
+  "origin": [
+    "Japan"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Seed Propagation",
+    "Layering Propagation",
+    "Stem/cane cuttings"
+  ],
+  "sunlight": [
+    "Full sun",
+    " Part sun/part shade"
+  ],
+  "soil": [
+    "Acidic",
+    " Humus rich",
+    " Well-drained"
+  ],
+  "growthRate": "Moderate",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766402f"
+  },
+  "commonName": "mountain bluet",
+  "scientificName": [
+    "Centaurea montana 'Amethyst in Snow'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Minimum",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Asteraceae",
+  "origin": [
+    "Europe"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    " Part sun/part shade"
+  ],
+  "soil": [
+    "Well-drained"
+  ],
+  "growthRate": "Moderate",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664030"
+  },
+  "commonName": "purple coneflower",
+  "scientificName": [
+    "Echinacea purpurea 'Ovation'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Minimum",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Asteraceae",
+  "origin": [
+    "Eastern and central North America"
+  ],
+  "attracts": [
+    "Birds",
+    " Butterflies"
+  ],
+  "propagation": [
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [
+    "Sandy Loamy Clay Rocky"
+  ],
+  "growthRate": "Moderate",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664031"
+  },
+  "commonName": "yellow jacobinia",
+  "scientificName": [
+    "Justicia aurea"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/4552_justicia_aurea/medium/24599819290_7f31445b58_b.jpg",
+  "family": "Acanthaceae",
+  "origin": [
+    "Central America",
+    "Mexico"
+  ],
+  "attracts": [
+    "Hummingbirds"
+  ],
+  "propagation": [
+    "Division",
+    "Cutting",
+    "Layering Propagation",
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": false,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": true,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664032"
+  },
+  "commonName": "daylily",
+  "scientificName": [
+    "Hemerocallis 'Ivory Dawn'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/3633_hemerocallis_wayside_king_royale/medium/52582221879_4c541c62b5_b.jpg",
+  "family": "Asphodelaceae",
+  "origin": [
+    "Japan"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Division",
+    "Seed Propagation",
+    "Tissue Culture",
+    "Grafting Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664033"
+  },
+  "commonName": "variegated kiwi vine",
+  "scientificName": [
+    "Actinidia kolomikta"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/537_actinidia_kolomikta/medium/51490517809_fc47df43b2_b.jpg",
+  "family": "Actinidiaceae",
+  "origin": [
+    "Temperate eastern Asia"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Softwood Cuttings",
+    "Grafting Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [
+    "Alkaline",
+    " Well-drained"
+  ],
+  "growthRate": "High",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664034"
+  },
+  "commonName": "gaura",
+  "scientificName": [
+    "Gaura lindheimeri 'Dauphine'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/3100_gaura_lindheimeri_dauphine/medium/52208472697_01fa179a5b_b.jpg",
+  "family": "Onagraceae",
+  "origin": [
+    "United States"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Division",
+    "Cutting",
+    "Seed Propagation",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": false,
+  "maintenance": "Moderate",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664035"
+  },
+  "commonName": "daylily",
+  "scientificName": [
+    "Hemerocallis 'Autumn Red'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/3469_hemerocallis_autumn_red/medium/52224756688_cf13f0b82e_b.jpg",
+  "family": "Asphodelaceae",
+  "origin": [
+    "Japan"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Division",
+    "Seed Propagation",
+    "Tissue Culture",
+    "Grafting Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664020"
+  },
+  "commonName": "ornamental onion",
+  "scientificName": [
+    "Allium 'Ambassador'"
+  ],
+  "cycle": "Perennial",
+  "watering": "Minimum",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Amaryllidaceae",
+  "origin": [
+    "Netherlands"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Division",
+    "Seed Propagation",
+    "Bulbils",
+    "Offsets"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664037"
+  },
+  "commonName": "daylily",
+  "scientificName": [
+    "Hemerocallis 'Painted Trillium'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/3598_hemerocallis_ribbons_and_curls/medium/52334581538_f1df7c1beb_b.jpg",
+  "family": "Asphodelaceae",
+  "origin": [
+    "Japan"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Division"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664038"
+  },
+  "commonName": "abelia",
+  "scientificName": [
+    "Abelia 'Rose Creek'"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/408_abelia_rose_creek/medium/21931595768_e94f9b5c49_b.jpg",
+  "family": "Caprifoliaceae",
+  "origin": [
+    "United States"
+  ],
+  "attracts": [
+    "Hummingbirds",
+    " Butterflies"
+  ],
+  "propagation": [
+    "Cutting",
+    "Layering Propagation",
+    "Grafting Propagation",
+    "Division",
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664039"
+  },
+  "commonName": "fragrant abelia",
+  "scientificName": [
+    "Abelia mosanensis 'SMNAMDS' SWEET EMOTION"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/407_abelia_mosanensis_smnamds_sweet_emotion/medium/715px-Abelia_mosanensis_2015-05-29_OB_335.jpg",
+  "family": "Caprifoliaceae",
+  "origin": [
+    "South Korea"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Cutting",
+    "Layering Propagation",
+    "Grafting Propagation",
+    "Division",
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766403a"
+  },
+  "commonName": "sacred lotus",
+  "scientificName": [
+    "Nelumbo 'Momo Botan'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Frequent",
+  "image": "https://perenual.com/storage/species_image/5435_nelumbo_momo_botan/medium/51095694781_316ff07905_b.jpg",
+  "family": "Nelumbonaceae",
+  "origin": [
+    "China",
+    "India",
+    "Japan",
+    "Korea",
+    "Vietnam"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Seed Propagation",
+    "Division",
+    "Cutting",
+    "Air Layering Propagation",
+    "Grafting Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": true,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766403b"
+  },
+  "commonName": "coneflower",
+  "scientificName": [
+    "Echinacea 'Meteor Red'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Minimum",
+  "image": "https://perenual.com/storage/species_image/2601_echinacea_meteor_red/medium/autumn-flowers-asters-autumn-autumn-decoration-preview.jpg",
+  "family": "Asteraceae",
+  "origin": [
+    "United States"
+  ],
+  "attracts": [
+    "Birds",
+    " Butterflies"
+  ],
+  "propagation": [
+    "Seed Propagation",
+    "Division",
+    "Root Cutting",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766403c"
+  },
+  "commonName": "cyclamineus daffodil",
+  "scientificName": [
+    "Narcissus 'Little Princess'"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/5375_narcissus_little_princess/medium/2560px-Pink_Charm_2.jpg",
+  "family": "Amaryllidaceae",
+  "origin": [
+    "Netherlands"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Division",
+    "Seed Propagation",
+    "Grafting Propagation",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766403d"
+  },
+  "commonName": "shasta daisy",
+  "scientificName": [
+    "Leucanthemum superbum 'Real Dream'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Minimum",
+  "image": "https://perenual.com/storage/species_image/4778_leucanthemum_superbum_switzerland/medium/51330162695_8ce914e7e3_b.jpg",
+  "family": "Asteraceae",
+  "origin": [
+    "Japan"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Division",
+    "Stem Cutting Propagation",
+    "Seed Propagation",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766403e"
+  },
+  "commonName": "hosta",
+  "scientificName": [
+    "Hosta 'Krossa Regal'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/3901_hosta_krossa_regal/medium/52141407260_8b64a18a59_b.jpg",
+  "family": "Asparagaceae",
+  "origin": [
+    "Japan"
+  ],
+  "attracts": [
+    "Hummingbirds"
+  ],
+  "propagation": [
+    "Division",
+    "Layering Propagation",
+    "Offsets",
+    "Seed Propagation",
+    "Tissue Culture"
+  ],
+  "sunlight": [
+    "Part shade",
+    "full shade"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664027"
+  },
+  "commonName": "great globe thistle",
+  "scientificName": [
+    "Echinops sphaerocephalus 'Arctic Glow'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Minimum",
+  "image": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/medium/49255769768_df55596553_b.jpg",
+  "family": "Asteraceae",
+  "origin": [
+    "Russia",
+    "Ukraine",
+    "Belarus",
+    "Moldova",
+    "Lithuania",
+    "Latvia",
+    "Estonia",
+    "Poland",
+    "Czech Republic",
+    "Slovakia",
+    "Hungary",
+    "Romania",
+    "Bulgaria",
+    "Slovenia",
+    "Croatia",
+    "Bosnia and Herzegovina",
+    "Serbia",
+    "Montenegro",
+    "Kosovo",
+    "Albania"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Seed Propagation",
+    "Division",
+    "Root Cutting",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": false,
+  "maintenance": "Low",
+  "thorny": true,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664040"
+  },
+  "commonName": "butterfly bush",
+  "scientificName": [
+    "Buddleja davidii 'Monrell' STRAWBERRY LEMONADE"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "family": "Scrophulariaceae",
+  "origin": [
+    "China",
+    "Japan"
+  ],
+  "attracts": [
+    "Hummingbirds",
+    " Butterflies"
+  ],
+  "propagation": [
+    "Seed Propagation",
+    "Softwood Cuttings",
+    "Hardwood Cuttings",
+    "Layering Propagation"
+  ],
+  "sunlight": [
+    "Sun",
+    " Partial Shade"
+  ],
+  "soil": [
+    "Well-drained"
+  ],
+  "growthRate": "High",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": true,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e297664036"
+  },
+  "commonName": "coral vine",
+  "scientificName": [
+    "Antigonon leptopus"
+  ],
+  "cycle": "Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/857_antigonon_leptopus/medium/24665048204_b6360869a1_b.jpg",
+  "family": "Polygonaceae",
+  "origin": [
+    "Mexico"
+  ],
+  "attracts": [],
+  "propagation": [
+    "Stem Cutting Propagation",
+    "Root Cutting",
+    "Layering Propagation",
+    "Air Layering Propagation",
+    "Division",
+    "Seed Propagation"
+  ],
+  "sunlight": [
+    "Full sun"
+  ],
+  "soil": [],
+  "growthRate": "High",
+  "droughtTolerant": true,
+  "maintenance": "Moderate",
+  "thorny": true,
+  "invasive": true,
+  "tropical": true,
+  "indoor": false,
+  "flowers": true,
+  "fruits": true,
+  "cuisine": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "642e965d05b141e29766403f"
+  },
+  "commonName": "daylily",
+  "scientificName": [
+    "Hemerocallis 'Stella de Oro'"
+  ],
+  "cycle": "Herbaceous Perennial",
+  "watering": "Average",
+  "image": "https://perenual.com/storage/species_image/3619_hemerocallis_stella_de_oro/medium/48291547617_1009ef488a_b.jpg",
+  "family": "Asphodelaceae",
+  "origin": [
+    "Japan"
+  ],
+  "attracts": [
+    "Butterflies"
+  ],
+  "propagation": [
+    "Division",
+    "Seed Propagation",
+    "Tissue Culture",
+    "Grafting Propagation"
+  ],
+  "sunlight": [
+    "Full sun",
+    "part shade"
+  ],
+  "soil": [],
+  "growthRate": "Low",
+  "droughtTolerant": true,
+  "maintenance": "Low",
+  "thorny": false,
+  "invasive": false,
+  "tropical": false,
+  "indoor": false,
+  "flowers": true,
+  "fruits": false,
+  "cuisine": false,
+  "__v": 0
 }]

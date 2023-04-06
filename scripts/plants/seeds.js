@@ -5,7 +5,7 @@ const axios = require("axios");
 const apiUrl = "https://perenual.com/api";
 const apiKey = process.env.API_KEY;
 const Plant = require("../../models/Plant.model");
-
+const plantsJSON = require('../../plants.json')
 const PLANTS_LIMIT = 200;
 
 const http = axios.create({
@@ -28,6 +28,12 @@ const getRandomPlantId = (total) => {
 };
 
 const getRandomPlants = () => {
+  const scriptParams = process.argv
+  const localJSON = scriptParams[2].split('=')[1]
+  if(localJSON === 'true') {
+    return new Promise((resolve, reject) => resolve(plantsJSON))
+  }
+
   return getTotalNumberPlants().then((total) => {
     const ids = [];
 
@@ -53,16 +59,17 @@ const getRandomPlants = () => {
 
     return Promise.all(plantDetail);
   });
-};
+}
+
 
 getRandomPlants()
   .then((plants) => {
     plants.map((plant) => {
-      console.log(plant.id);
+      //console.log(plant.id);
       Plant.create({
-        commonName: plant.common_name,
-        image: plant.default_image.medium_url,
-        scientificName: plant.scientific_name,
+        commonName: plant.common_name || plant.commonName,
+        image: plant.default_image ? plant.default_image.medium_url : plant.image,
+        scientificName: plant.scientific_name || plant.scientificName,
         cycle: plant.cycle,
         watering: plant.watering,
         sunlight: plant.sunlight,
@@ -71,8 +78,8 @@ getRandomPlants()
         attracts: plant.attracts,
         propagation: plant.propagation,
         soil:plant.soil,
-        growthRate: plant.growth_rate,
-        droughtTolerant: plant.drought_tolerant,
+        growthRate: plant.growth_rate || plant.growthRate,
+        droughtTolerant: plant.drought_tolerant || plant.droughtTolerant,
         maintenance: plant.maintenance,
         thorny: plant.thorny,
         invasive: plant.invasive,
@@ -83,10 +90,13 @@ getRandomPlants()
         cuisine: plant.cuisine
       })
         .then((res) => {
-          console.log(res);
-         // mongoose.disconnect();
+          //console.log(res);
+          
         })
         .catch((err) => console.log(err));
     });
+    //.then(mongoose.disconnect())
+
   })
   .catch((err) => console.error(err));
+ 

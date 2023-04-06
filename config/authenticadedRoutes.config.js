@@ -13,12 +13,14 @@ router.get('/users/:id', usersController.getUser);
 
 //--- Plants routes ---//
 router.get('/plants', plantsController.getAllPlants)
-// router.get('/plants/:commonName', plantsController.detailPlant)
+router.get('/plants/:id', plantsController.detailPlant)
 
 //--- Post routes ---//
 router.post('/new-post', postController.create)
 router.get('/posts', postController.listPosts)
-router.get('/my-posts', postController.listMyPosts)
+// router.get('/my-posts', postController.listMyPosts)
 router.get("/posts/:id", postController.detailPost)
+//router.patch('/posts/:id/edit', postController.edit)
+router.post('/posts/:id/delete', postController.delete)
 
 module.exports = router;

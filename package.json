@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "seedPlants": "node scripts/plants/seeds"
+    "seedPlants": "node scripts/plants/seeds local=false",
+    "seedPlantsLocal": "node scripts/plants/seeds local=true"
   },
   "repository": {
     "type": "git",
