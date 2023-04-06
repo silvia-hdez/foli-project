@@ -14,7 +14,14 @@ module.exports.getAllPlants = (req, res, next) => {
        
         }
 
-    
+// module.exports.detailPlant = (req, res, next) => {
+//    const {commonName} = req.params
+//    const newName = commonName.replace(" ", '').toLowerCase()
+//    console.log(newName)
+//    Plant.findOne({commonName: newName})
+//    .then(plant => {res.json(plant)})
+//    .catch(next)
+// }
      
       
       

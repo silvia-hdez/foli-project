@@ -26,7 +26,10 @@ app.use(express.json())
 //--- Routes ---//
 
 const routes = require('./config/routes.config');
+const autheticatedRoutes = require('./config/authenticadedRoutes.config');
+const authMiddleware = require('./middelwares/auth.middelware')
 app.use(routes);
+app.use(authMiddleware.isAuthenticated, autheticatedRoutes)
 
 //--- Handle errors ---//
 
