@@ -65,7 +65,7 @@ const getRandomPlants = () => {
 getRandomPlants()
   .then((plants) => {
     plants.map((plant) => {
-      //console.log(plant.id);
+      if(plant.image || plant.default_image?.medium_url){
       Plant.create({
         commonName: plant.common_name || plant.commonName,
         image: plant.default_image ? plant.default_image.medium_url : plant.image,
@@ -93,7 +93,7 @@ getRandomPlants()
           //console.log(res);
           
         })
-        .catch((err) => console.log(err));
+        .catch((err) => console.log(err));}
     });
     //.then(mongoose.disconnect())
 

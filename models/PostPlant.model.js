@@ -9,7 +9,7 @@ const postSchema = new mongoose.Schema({
         default: null,
     },
     image: {
-        type: [String],
+        type: {},
         required: [true, REQUIRED_FIELD],
     },
     userPost: {

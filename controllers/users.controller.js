@@ -5,12 +5,15 @@ const { StatusCodes } = require('http-status-codes');
 //--- Crear usuario ---//
 
 module.exports.create = (req, res, next) => {
+  console.log(JSON.stringify(req.body))
   const { email, password, fullName, userName, userPhone } = req.body;
   User.create({ email, password, fullName, userName, userPhone })
     .then(userCreated => {
       res.status(StatusCodes.CREATED).json(userCreated);
     })
-    .catch(next)
+    .catch((err) => {
+      res.status(StatusCodes.CONFLICT).json(err)
+    })
 }
 
 //--- Obtener listado usuarios creados ---//
