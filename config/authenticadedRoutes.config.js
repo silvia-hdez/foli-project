@@ -7,6 +7,7 @@ const authMiddleware = require('../middelwares/auth.middelware');
 const plantsController = require('../controllers/plants.controller')
 
 const postController = require('../controllers/post.contoller.js')
+const upload = require('../config/storage.config')
 
 router.get('/users/me', usersController.getCurrentUser);
 router.get('/users/:id', usersController.getUser);
@@ -17,7 +18,7 @@ router.get('/plants/:id', plantsController.detailPlant)
 
 
 //--- Post routes ---//
-router.post('/new-post', postController.create)
+router.post('/new-post', upload.array('image', 5), postController.create)
 router.get('/posts', postController.listPosts)
 router.get('/my-posts', postController.listMyPosts)
 router.get("/posts/:id", postController.detailPost)

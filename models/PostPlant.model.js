@@ -9,12 +9,23 @@ const postSchema = new mongoose.Schema({
         default: null,
     },
     image: {
-        type: String,
+        type: [String],
         required: [true, REQUIRED_FIELD],
     },
     userPost: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
+        required:true
+    }, 
+    description: {
+        type: String,
+    },
+    comments: {
+        type: String,
+    },
+    state: {
+        type: String,
+        enum: ["Insta", "Ayuda", "Solucionado", "Esqueje"],
         required:true
     }
 

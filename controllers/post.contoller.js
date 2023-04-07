@@ -5,11 +5,18 @@ const PostPlant = require('../models/PostPlant.model')
 //---Crear post--//
 
 module.exports.create = (req, res, next) => {
-    PostPlant.create(req.body)
+
+    if(req.files) {
+       req.body.image=req.files.map(file=>file.path)
+    }
+    const {name, image, description, comments, state} = req.body
+    PostPlant.create({name, image, userPost: req.currentUserId, description,
+        comments, state})
         .then(newPost => {
             res.status(StatusCodes.CREATED).json(newPost)
         })
         .catch(next)
+    
 }
 
 //---Obtener listado posts---//
