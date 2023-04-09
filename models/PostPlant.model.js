@@ -1,35 +1,53 @@
-const mongoose = require ('mongoose')
-const REQUIRED_FIELD = require ('../config/errorMessages')
+const mongoose = require("mongoose");
+const REQUIRED_FIELD = require("../config/errorMessages");
 
-
-const postSchema = new mongoose.Schema({
+const postSchema = new mongoose.Schema(
+  {
     name: {
-        type:String,
-        required: [true, REQUIRED_FIELD],
-        default: null,
+      type: String,
+      required: [true, REQUIRED_FIELD],
+      default: null,
     },
     image: {
-        type: {},
-        required: [true, REQUIRED_FIELD],
+      type: [String],
+      required: [true, REQUIRED_FIELD],
     },
-    userPost: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'User',
-        required:true
-    }, 
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
     description: {
-        type: String,
+      type: String,
     },
     comments: {
-        type: String,
+      type: String,
     },
     state: {
-        type: String,
-        enum: ["Insta", "Ayuda", "Solucionado", "Esqueje"],
-        required:true
-    }
+      type: String,
+      enum: ["Insta", "Ayuda", "Solucionado", "Esqueje"],
+    },
+  },
+  {
+    timestamps: true,
+    toObject: {
+        virtual: true
+      }
+  }
+);
 
+postSchema.virtual('saves',{
+    ref: 'Save',
+    foreignField: 'post',
+    localField: '_id',
+    justOne: false
 })
 
-const PostPlant = mongoose.model('PostPlant', postSchema)
-module.exports = PostPlant
+postSchema.virtual('likes',{
+    ref: 'Like',
+    foreignField: 'post',
+    localField: '_id',
+    justOne: false
+})
+
+const PostPlant = mongoose.model("PostPlant", postSchema);
+module.exports = PostPlant;

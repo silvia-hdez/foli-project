@@ -18,11 +18,11 @@ router.get('/plants/:id', plantsController.detailPlant)
 
 
 //--- Post routes ---//
-router.post('/new-post', upload.array('image', 5), postController.create)
+router.post('/new-post', upload.array('image'), postController.create)
 router.get('/posts', postController.listPosts)
 router.get('/my-posts', postController.listMyPosts)
 router.get("/posts/:id", postController.detailPost)
-router.post('/posts/:id/edit', postController.edit)
+router.post('/posts/:id/edit', upload.array('image'), postController.edit)
 router.post('/posts/:id/delete', postController.delete)
 
 module.exports = router;

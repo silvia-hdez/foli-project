@@ -1,7 +1,7 @@
 const mongoose = require ('mongoose')
 const { REQUIRED_FIELD } = require('../config/errorMessages')
 
-const PlantSchema = new mongoose.Schema({
+const plantSchema = new mongoose.Schema({
     commonName: {
         type: String,
         required: [true, REQUIRED_FIELD]
@@ -30,7 +30,23 @@ const PlantSchema = new mongoose.Schema({
     flowers: Boolean,  
     fruits: Boolean,
     cuisine: Boolean,
+},
+{
+    timestamps: true,
+    toObject: {
+        virtual: true
+      }
+}
+)
+
+plantSchema.virtual('saves',{
+    ref: 'Save',
+    foreignField: 'post',
+    localField: '_id',
+    justOne: false
 })
 
-const Plant = mongoose.model('Plant', PlantSchema)
+
+
+const Plant = mongoose.model('Plant', plantSchema)
 module.exports = Plant

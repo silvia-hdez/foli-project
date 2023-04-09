@@ -12,7 +12,7 @@ const PHONE_REGEX = /^\+?[0-9]{9,15}$/
   //--- Montar un schema de mongoose ---//
 
 
-const UserSchema = new mongoose.Schema(
+const userSchema = new mongoose.Schema(
   {
     fullName: {
       type: String,
@@ -59,24 +59,38 @@ const UserSchema = new mongoose.Schema(
   }
 )
 
-UserSchema.virtual('posts', {
+userSchema.virtual('posts', {
   ref: 'PostPlant',
-  foreignField: 'userPost',
+  foreignField: 'user',
   localField: '_id',
   justOne: false
 })
 
-UserSchema.path('email').validate(function (value) {
+userSchema.virtual('saves', {
+  ref: 'Save',
+  foreignField: 'user',
+  localField: '_id',
+  justOne: false
+})
+
+userSchema.virtual('likes', {
+  ref: 'Like',
+  foreignField: 'user',
+  localField: '_id',
+  justOne: false
+})
+
+userSchema.path('email').validate(function (value) {
   return value || this.userPhone;
 });
 
-UserSchema.path('userPhone').validate(function (value) {
+userSchema.path('userPhone').validate(function (value) {
   return value || this.email;
 });
 
 //---Se hashea la contraseña antes de que se guarde en la base de datos ---//
 
-UserSchema.pre('save', function(next) {
+userSchema.pre('save', function(next) {
   if (this.isModified('password')) {
     bcrypt.hash(this.password, ROUNDS)
       .then(hash => {
@@ -91,12 +105,12 @@ UserSchema.pre('save', function(next) {
 
 //--- Comparar la contraseña introducida, con la almacenada en la base de datos ---//
 
-UserSchema.methods.checkPassword = function(passwordToCompare) {
+userSchema.methods.checkPassword = function(passwordToCompare) {
   return bcrypt.compare(passwordToCompare, this.password);
 }
 
 //--- Crear modelo User y exportarlo ---//
 
-const User = mongoose.model('User', UserSchema);
+const User = mongoose.model('User', userSchema);
 
 module.exports = User;

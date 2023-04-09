@@ -5,12 +5,12 @@ const PostPlant = require('../models/PostPlant.model')
 //---Crear post--//
 
 module.exports.create = (req, res, next) => {
-
+    const {name, image, description, comments, state} = req.body
+    console.log(req.body)
     if(req.files) {
        req.body.image=req.files.map(file=>file.path)
     }
-    const {name, image, description, comments, state} = req.body
-    PostPlant.create({name, image, userPost: req.currentUserId, description,
+    PostPlant.create({name, image, user: req.currentUserId, description,
         comments, state})
         .then(newPost => {
             res.status(StatusCodes.CREATED).json(newPost)
@@ -23,7 +23,7 @@ module.exports.create = (req, res, next) => {
 
 module.exports.listPosts = (req, res, next) => {
     const userId = req.currentUserId;
-    PostPlant.find({userPost: {$ne: userId}})
+    PostPlant.find({user: {$ne: userId}})
         .then(posts => {
             res.json(posts)
         })
@@ -32,7 +32,7 @@ module.exports.listPosts = (req, res, next) => {
 
 module.exports.listMyPosts = (req, res, next) => {
     const userId = req.currentUserId;
-    PostPlant.find({ userPost: userId })
+    PostPlant.find({ user: userId })
         .then(posts => {
             res.json(posts)
         })
@@ -61,11 +61,25 @@ module.exports.delete = (req, res, next) => {
 
 //---Editar post---//
 module.exports.edit = (req, res, next) => {
-    const updates = {name: req.body.name}
-    console.log(updates)
-    PostPlant.findByIdAndUpdate(req.params.id, updates)
-        .then(()=>{
-            res.send('Post actualizado');
+    const user = req.params.id
+    const updates = {name: req.body.name, image: req.body.image, state: req.body.state}
+    if(req.files) {
+        updates.image=req.files.map(file=>file.path)
+     }
+    PostPlant.findById(user)
+        .then((post)=>{
+            if(!post) {
+                res.status(StatusCodes.NOT_FOUND).send("Post no encontrado");
+            } else if (post.user != req.currentUserId) {
+                res.status(StatusCodes.UNAUTHORIZED).send("No autorizado para editar")}
+            else {
+                PostPlant.findByIdAndUpdate(user, updates)
+                .then(() => {
+                    res.send('Post actualizado');
+                })
+                .catch(next);
+            }
         })
         .catch(next)
-}
+        
+    }

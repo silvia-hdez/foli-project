@@ -16,5 +16,13 @@
 
 ## TODO
 - Verificar que el userName y el teléfono no existen.
+- Meter foto al usuario. Modificar el perfil. 
+En la ruta de editar perfil, meter 'upload.single('image')
 
-- ~~Task 1~~
+## PROBLEMAS
+- No se enlaza cloudinary
+
+
+## MEJORAR
+- Volver a llamar a la API, sacarme todos los días un JSON y que incluya todas las caracterísitcas (incluir other names y el ID)
+- Meter todos los JSON en uno y luego no visualizar los que no tienen foto ni los que están repetidos.
