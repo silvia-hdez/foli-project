@@ -21,3 +21,7 @@ module.exports.detailPlant = (req, res, next) => {
 };
 
 
+module.exports.save = (req, res, next) => {
+  
+}
+

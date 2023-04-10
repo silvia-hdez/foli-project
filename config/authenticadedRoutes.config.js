@@ -16,6 +16,8 @@ router.get('/users/:id', usersController.getUser);
 router.get('/plants', plantsController.getAllPlants)
 router.get('/plants/:id', plantsController.detailPlant)
 
+router.post('/plants/:id/save', plantsController.save)
+
 
 //--- Post routes ---//
 router.post('/new-post', upload.array('image'), postController.create)

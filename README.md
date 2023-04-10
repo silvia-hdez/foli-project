@@ -18,6 +18,8 @@
 - Verificar que el userName y el teléfono no existen.
 - Meter foto al usuario. Modificar el perfil. 
 En la ruta de editar perfil, meter 'upload.single('image')
+- Hacer Logout
+- Lógicas para hacer el guardado de las fichas de plantas
 
 ## PROBLEMAS
 - No se enlaza cloudinary
