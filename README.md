@@ -20,6 +20,7 @@
 En la ruta de editar perfil, meter 'upload.single('image')
 - Hacer Logout
 - Lógicas para hacer el guardado de las fichas de plantas
+Cómo relacionar el modelo 'User' con 'Plants'
 
 ## PROBLEMAS
 - No se enlaza cloudinary

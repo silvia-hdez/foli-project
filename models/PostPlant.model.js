@@ -29,25 +29,25 @@ const postSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-    toObject: {
-        virtual: true
-      }
+    toJSON: {
+      virtual: true,
+    },
   }
 );
 
-postSchema.virtual('saves',{
-    ref: 'Save',
-    foreignField: 'post',
-    localField: '_id',
-    justOne: false
-})
+postSchema.virtual("saves", {
+  ref: "Save",
+  foreignField: "post",
+  localField: "_id",
+  justOne: false,
+});
 
-postSchema.virtual('likes',{
-    ref: 'Like',
-    foreignField: 'post',
-    localField: '_id',
-    justOne: false
-})
+postSchema.virtual("likes", {
+  ref: "Like",
+  foreignField: "post",
+  localField: "_id",
+  justOne: false,
+});
 
 const PostPlant = mongoose.model("PostPlant", postSchema);
 module.exports = PostPlant;

@@ -1,25 +1,27 @@
-const mongoose = require ('mongoose')
+const mongoose = require("mongoose");
 
-const saveSchema = new mongoose.model({
+const saveSchema = new mongoose.Schema(
+  {
     user: {
-        type: mongoose.Types.ObjectId,
-        ref: 'User'
+      type: mongoose.Types.ObjectId,
+      ref: "User",
     },
     post: {
-        type: mongoose.Types.ObjectId,
-        ref: 'PostPlant'
+      type: mongoose.Types.ObjectId,
+      ref: "PostPlant",
     },
     plants: {
-        type: mongoose.Types.ObjectId,
-        ref: 'Plant'
-    }
-},
-{
+      type: mongoose.Types.ObjectId,
+      ref: "Plant",
+    },
+  },
+  {
     timestamps: true,
-    toObject: {
-      virtual: true
-    }
-})
+    toJSON: {
+      virtual: true,
+    },
+  }
+);
 
-const Save = mongoose.model('Save', saveSchema)
-module.exports = Save
+const Save = mongoose.model("Save", saveSchema);
+module.exports = Save;

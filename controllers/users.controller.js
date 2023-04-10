@@ -55,3 +55,16 @@ module.exports.getCurrentUser = (req, res, next) => {
     })
     .catch(next)
 }
+
+//---Editar usuario---//
+module.exports.edit= (req, res, next) => {
+  if (req.file) {
+    req.body.image = req.file.path;
+  }
+	User.findByIdAndUpdate(req.user, req.body, {image: req.body})
+		.then(() => {
+      console.log(req.body)
+      res.send("Usuario actualizado");
+})
+		.catch(next)
+}

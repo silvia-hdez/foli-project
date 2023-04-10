@@ -1,42 +1,43 @@
 const { StatusCodes } = require("http-status-codes");
 const PostPlant = require("../models/PostPlant.model");
-const User = require('../models/User.model')
+const User = require("../models/User.model");
 
 //---Crear post--//
 
 module.exports.create = (req, res, next) => {
-    const { name, image, description, comments, state } = req.body;
-    console.log(req.body);
-    if (req.files) {
-      req.body.image = req.files.map((file) => file.path);
-    }
-  
-    User.findById(req.currentUserId)
-      .then((user) => {
-        if (!user) {
-          return res.status(StatusCodes.NOT_FOUND).send("User no encontrado");
-        }
-        return PostPlant.create({
-          name,
-          image,
-          user,
-          description,
-          comments,
-          state,
-        });
-      })
-      .then((newPost) => {
-        res.status(StatusCodes.CREATED).json(newPost);
-      })
-      .catch(next);
-  };
-  
+  const { name, image, description, comments, state } = req.body;
+
+  console.log(req.currentUserId, req.body, req.files);
+  if (req.files) {
+    req.body.image = req.files.map((file) => file.path);
+  }
+
+  // User.findById(req.currentUserId)
+  //   .then((user) => {
+  //     if (!user) {
+  //       return res.status(StatusCodes.NOT_FOUND).send("User no encontrado");
+  //     }
+  //     return PostPlant.create({
+  //       name,
+  //       image,
+  //       user,
+  //       description,
+  //       comments,
+  //       state,
+  //     });
+  //   })
+  //   .then((newPost) => {
+  //     res.status(StatusCodes.CREATED).json(newPost);
+  //   })
+  //   .catch(next);
+};
 
 //---Obtener listado posts---//
 
 module.exports.listPosts = (req, res, next) => {
-  PostPlant.find()
-    .populate('user')
+  const userId = req.currentUserId;
+  PostPlant.find({ user: { $ne: userId } })
+    .populate("user")
     .then((posts) => {
       res.json(posts);
     })
@@ -46,7 +47,6 @@ module.exports.listPosts = (req, res, next) => {
 module.exports.listMyPosts = (req, res, next) => {
   const userId = req.currentUserId;
   PostPlant.find({ user: userId })
-
     .then((posts) => {
       res.json(posts);
     })
