@@ -20,6 +20,7 @@ router.get("/plants/:id", plantsController.detailPlant);
 //---Bookmarks---//
 router.post("/plants/save/:plantId", plantsController.save);
 router.get("/save-plants", plantsController.listSavePlants);
+router.post("/saves/:saveId/delete", plantsController.delete);
 
 //--- Post routes ---//
 router.post("/new-post", upload.any(), postController.create);

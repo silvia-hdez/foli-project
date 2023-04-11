@@ -30,18 +30,25 @@ module.exports.save = (req, res, next) => {
 
   newSave
     .save()
-    .then(() => {
+    .then((savedPlant) => {
       console.log(newSave)
-      res.status(201).send("Planta guardada correctamente")
+      //res.status(201).send("Planta guardada correctamente")
+      res.status(201).json(newSave);
     }
    )
     .catch((err) => res.status(500).send(err.message));
 };
 
 module.exports.listSavePlants = (req, res, next) => {
-  console.log(req.currentUserId)
+  //console.log(req.currentUserId)
   Save.find({ user: req.currentUserId })
     .populate("plant")
-    .then((saves) => res.status(200).send(saves))
+    .then((saves) => res.status(200).json(saves))
     .catch((err) => res.status(500).send(err.message));
 };
+
+module.exports.delete = (req, res, next) => {
+  Save.findByIdAndDelete(req.params.saveId)
+  .then(() =>  res.status(201).send("Bookmark eliminado correctamente"))
+  .catch((err) => console.log(err))
+}
