@@ -29,7 +29,7 @@ app.use(express.json()); // Para poder tener req.body en peticiones de tipo appl
 const routes = require("./config/routes.config");
 const autheticatedRoutes = require("./config/authenticadedRoutes.config");
 const authMiddleware = require("./middelwares/auth.middelware");
-
+app.use(routes)
 app.use(authMiddleware.isAuthenticated, autheticatedRoutes);
 
 //--- Handle errors ---//

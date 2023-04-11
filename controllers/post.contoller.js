@@ -12,24 +12,24 @@ module.exports.create = (req, res, next) => {
     req.body.image = req.files.map((file) => file.path);
   }
 
-  // User.findById(req.currentUserId)
-  //   .then((user) => {
-  //     if (!user) {
-  //       return res.status(StatusCodes.NOT_FOUND).send("User no encontrado");
-  //     }
-  //     return PostPlant.create({
-  //       name,
-  //       image,
-  //       user,
-  //       description,
-  //       comments,
-  //       state,
-  //     });
-  //   })
-  //   .then((newPost) => {
-  //     res.status(StatusCodes.CREATED).json(newPost);
-  //   })
-  //   .catch(next);
+  User.findById(req.currentUserId)
+    .then((user) => {
+      if (!user) {
+        return res.status(StatusCodes.NOT_FOUND).send("User no encontrado");
+      }
+      return PostPlant.create({
+        name,
+        image,
+        user,
+        description,
+        comments,
+        state,
+      });
+    })
+    .then((newPost) => {
+      res.status(StatusCodes.CREATED).json(newPost);
+    })
+    .catch(next);
 };
 
 //---Obtener listado posts---//
