@@ -10,7 +10,7 @@ const saveSchema = new mongoose.Schema(
       type: mongoose.Types.ObjectId,
       ref: "PostPlant",
     },
-    plants: {
+    plant: {
       type: mongoose.Types.ObjectId,
       ref: "Plant",
     },

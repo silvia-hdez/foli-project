@@ -42,7 +42,7 @@ const PlantSchema = new mongoose.Schema(
 
 PlantSchema.virtual("saves", {
   ref: "Save",
-  foreignField: "post",
+  foreignField: "plant",
   localField: "_id",
   justOne: false,
 });

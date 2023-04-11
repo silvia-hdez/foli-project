@@ -25,17 +25,23 @@ module.exports.detailPlant = (req, res, next) => {
 
 module.exports.save = (req, res, next) => {
   const { plantId } = req.params;
+  console.log(plantId)
   const newSave = new Save({ user: req.currentUserId, plant: plantId });
 
   newSave
     .save()
-    .then(() => res.status(201).send("Planta guardada correctamente"))
+    .then(() => {
+      console.log(newSave)
+      res.status(201).send("Planta guardada correctamente")
+    }
+   )
     .catch((err) => res.status(500).send(err.message));
 };
 
 module.exports.listSavePlants = (req, res, next) => {
+  console.log(req.currentUserId)
   Save.find({ user: req.currentUserId })
-    .populate("plants")
+    .populate("plant")
     .then((saves) => res.status(200).send(saves))
     .catch((err) => res.status(500).send(err.message));
 };
