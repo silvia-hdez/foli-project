@@ -10,7 +10,9 @@ const postController = require("../controllers/post.contoller.js");
 const upload = require("../config/storage.config");
 
 router.get("/users/me", usersController.getCurrentUser);
-router.post("/users/:id/edit", upload.single("image"), usersController.edit);
+//router.post("/users/:id/edit", upload.single("image"), usersController.edit);
+router.post("/users/:id/edit", usersController.edit);
+
 
 //--- Plants routes ---//
 router.get("/plants", plantsController.getAllPlants);

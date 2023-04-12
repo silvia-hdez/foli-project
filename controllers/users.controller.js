@@ -63,10 +63,12 @@ module.exports.edit = (req, res, next) => {
   if (req.file) {
     req.body.image = req.file.path;
   }
-  User.findByIdAndUpdate(req.user, req.body, { image: req.body })
+  User.findByIdAndUpdate(req.currentUserId, req.body, { image: req.body })
     .then(() => {
-      console.log(req.body);
+      console.log(req.currentUserId);
       res.send("Usuario actualizado");
     })
     .catch(next);
 };
+
+
