@@ -87,7 +87,7 @@ userSchema.virtual("posts", {
 userSchema.virtual("saves", {
   ref: "Save",
   foreignField: "user",
-  localField: "id",
+  localField: "_id",
   justOne: false,
 });
 

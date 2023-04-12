@@ -44,6 +44,7 @@ module.exports.list = (req, res, next) => {
 //--- Obtener el usuario actual ---//
 
 module.exports.getCurrentUser = (req, res, next) => {
+  console.log("users/me");
   User.findById(req.currentUserId)
     .populate("posts")
     .populate("likes")
