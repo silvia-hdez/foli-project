@@ -5,11 +5,11 @@ const User = require("../models/User.model");
 //---Crear post--//
 
 module.exports.create = (req, res, next) => {
-  const { name, image, description, comments, state } = req.body;
+  const { name, description, comments, state } = req.body;
+  let images = [];
 
-  console.log(req.currentUserId, req.body, req.files);
   if (req.files) {
-    req.body.image = req.files.map((file) => file.path);
+    images = req.files.map((file) => file.path);
   }
 
   User.findById(req.currentUserId)
@@ -19,7 +19,7 @@ module.exports.create = (req, res, next) => {
       }
       return PostPlant.create({
         name,
-        image,
+        image: images,
         user,
         description,
         comments,

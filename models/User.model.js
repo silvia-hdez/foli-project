@@ -88,23 +88,23 @@ userSchema.virtual("posts", {
 userSchema.virtual("saves", {
   ref: "Save",
   foreignField: "user",
-  localField: "_id",
+  localField: "id",
   justOne: false,
 });
 
 userSchema.virtual("likes", {
   ref: "Like",
   foreignField: "user",
-  localField: "_id",
+  localField: "id",
   justOne: false,
 });
 
-userSchema.virtual('plants', {
-  ref: 'Plant',
-  foreignField: 'user',
-  localField: '_id',
-  justOne: false
-})
+userSchema.virtual("plants", {
+  ref: "Plant",
+  foreignField: "user",
+  localField: "id",
+  justOne: false,
+});
 
 userSchema.path("email").validate(function (value) {
   return value || this.userPhone;

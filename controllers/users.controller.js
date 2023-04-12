@@ -1,70 +1,72 @@
-const User = require('../models/User.model');
-const createError = require('http-errors');
-const { StatusCodes } = require('http-status-codes');
+const User = require("../models/User.model");
+const createError = require("http-errors");
+const { StatusCodes } = require("http-status-codes");
 
 //--- Crear usuario ---//
 
 module.exports.create = (req, res, next) => {
-  console.log(JSON.stringify(req.body))
+  console.log(JSON.stringify(req.body));
   const { email, password, fullName, userName, userPhone } = req.body;
   User.create({ email, password, fullName, userName, userPhone })
-    .then(userCreated => {
+    .then((userCreated) => {
       res.status(StatusCodes.CREATED).json(userCreated);
     })
     .catch((err) => {
-      res.status(StatusCodes.CONFLICT).json(err)
-    })
-}
+      res.status(StatusCodes.CONFLICT).json(err);
+    });
+};
 
 //--- Obtener listado usuarios creados ---//
 
 module.exports.list = (req, res, next) => {
   User.find()
-    .then(users => res.json(users))
-    .catch(next)
-}
+    .then((users) => res.json(users))
+    .catch(next);
+};
 
 //--- Obtener el usuario por Id ---//
 
 module.exports.getUser = (req, res, next) => {
   User.findById(req.params.id)
-    .populate('likes')
-    .populate('saves')
-    .populate('posts')
-    .then(user => {
+    .populate("likes")
+    .populate("saves")
+    .populate("posts")
+    .then((user) => {
       if (!user) {
-        next(createError(StatusCodes.NOT_FOUND, 'User not found'))
+        next(createError(StatusCodes.NOT_FOUND, "User not found"));
       } else {
         res.json(user);
       }
     })
-    .catch(next)
-}
+    .catch(next);
+};
 
 //--- Obtener el usuario actual ---//
 
 module.exports.getCurrentUser = (req, res, next) => {
   User.findById(req.currentUserId)
-    .populate('posts')
-    .then(user => {
+    .populate("posts")
+    .populate("likes")
+    .populate("saves")
+    .then((user) => {
       if (!user) {
-        next(createError(StatusCodes.NOT_FOUND, 'User not found'))
+        next(createError(StatusCodes.NOT_FOUND, "User not found"));
       } else {
         res.json(user);
       }
     })
-    .catch(next)
-}
+    .catch(next);
+};
 
 //---Editar usuario---//
-module.exports.edit= (req, res, next) => {
+module.exports.edit = (req, res, next) => {
   if (req.file) {
     req.body.image = req.file.path;
   }
-	User.findByIdAndUpdate(req.user, req.body, {image: req.body})
-		.then(() => {
-      console.log(req.body)
+  User.findByIdAndUpdate(req.user, req.body, { image: req.body })
+    .then(() => {
+      console.log(req.body);
       res.send("Usuario actualizado");
-})
-		.catch(next)
-}
+    })
+    .catch(next);
+};

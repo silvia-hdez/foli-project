@@ -50,3 +50,7 @@ module.exports.login = (req, res, next) => {
     })
     .catch(next)
 }
+
+module.exports.logout = (req, res, next) => {
+ // const token = req.headers.authorization.split('')[1]
+}
