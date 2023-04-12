@@ -40,12 +40,18 @@ module.exports.save = (req, res, next) => {
 };
 
 module.exports.listSavePlants = (req, res, next) => {
-  console.log(req.currentUserId)
+
   Save.find({ user: req.currentUserId })
     .populate("plant")
-    .then((saves) => res.status(200).json(saves))
-    .catch((err) => res.status(500).send(err.message));
+    .then(saves => {
+      const savesPlants = saves.map(save => save.plant);
+      
+      res.status(200).json(savesPlants);
+    })
+    .catch(next);
+    
 };
+
 
 module.exports.delete = (req, res, next) => {
   Save.findByIdAndDelete(req.params.saveId)
@@ -54,14 +60,14 @@ module.exports.delete = (req, res, next) => {
 }
 
 
-module.exports.listMyPlantsSaves = (req, res, next) => {
-  Plant.find()
-  .populate('save')
-    .then((plants) => {
-      res.status(StatusCodes.OK).json(plants);
-    })
-    .catch(next);
-}
+// module.exports.listMyPlantsSaves = (req, res, next) => {
+//   Plant.find()
+//   .populate('save')
+//     .then((plants) => {
+//       res.status(StatusCodes.OK).json(plants);
+//     })
+//     .catch(next);
+//}
 
 // module.exports.listMyPlantsSaves = (req, res, next) => {
 //   const {user} = req.params

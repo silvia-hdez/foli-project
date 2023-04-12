@@ -10,9 +10,7 @@ const postController = require("../controllers/post.contoller.js");
 const upload = require("../config/storage.config");
 
 router.get("/users/me", usersController.getCurrentUser);
-//router.post("/users/:id/edit", upload.single("image"), usersController.edit);
-router.post("/users/:id/edit", usersController.edit);
-
+router.post("/users/edit", upload.single("image"), usersController.edit);
 
 //--- Plants routes ---//
 router.get("/plants", plantsController.getAllPlants);
@@ -22,7 +20,7 @@ router.get("/plants/:id", plantsController.detailPlant);
 router.post("/plants/save/:plantId", plantsController.save);
 router.get("/save-plants", plantsController.listSavePlants);
 router.post("/saves/:saveId/delete", plantsController.delete);
-router.get('/my-saves', plantsController.listMyPlantsSaves)
+//router.get('/my-saves', plantsController.listMyPlantsSaves)
 
 //--- Post routes ---//
 router.post("/new-post", upload.any(), postController.create);
@@ -35,4 +33,4 @@ router.post("/posts/:id/delete", postController.delete);
 module.exports = router;
 
 //---Logout---//
-router.get('/logout', authController.logout)
+router.get("/logout", authController.logout);

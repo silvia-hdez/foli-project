@@ -26,20 +26,20 @@ module.exports.list = (req, res, next) => {
 
 //--- Obtener el usuario por Id ---//
 
-module.exports.getUser = (req, res, next) => {
-  User.findById(req.params.id)
-    .populate("likes")
-    .populate("saves")
-    .populate("posts")
-    .then((user) => {
-      if (!user) {
-        next(createError(StatusCodes.NOT_FOUND, "User not found"));
-      } else {
-        res.json(user);
-      }
-    })
-    .catch(next);
-};
+// module.exports.getUser = (req, res, next) => {
+//   User.findById(req.params.id)
+//     .populate("likes")
+//     .populate("saves")
+//     .populate("posts")
+//     .then((user) => {
+//       if (!user) {
+//         next(createError(StatusCodes.NOT_FOUND, "User not found"));
+//       } else {
+//         res.json(user);
+//       }
+//     })
+//     .catch(next);
+// };
 
 //--- Obtener el usuario actual ---//
 
@@ -63,12 +63,9 @@ module.exports.edit = (req, res, next) => {
   if (req.file) {
     req.body.image = req.file.path;
   }
-  User.findByIdAndUpdate(req.currentUserId, req.body, { image: req.body })
-    .then(() => {
-      console.log(req.currentUserId);
-      res.send("Usuario actualizado");
+  User.findByIdAndUpdate(req.currentUserId, req.body, { new: true })
+    .then((userUpdated) => {
+      res.status(StatusCodes.OK).json(userUpdated);
     })
     .catch(next);
 };
-
-
