@@ -38,7 +38,7 @@ module.exports.listPosts = (req, res, next) => {
   const userId = req.currentUserId;
 
   PostPlant.find({ user: { $ne: userId } })
-
+  .populate('user')
     .then((posts) => {
       
       console.log(posts[0])
@@ -50,6 +50,7 @@ module.exports.listPosts = (req, res, next) => {
 module.exports.listMyPosts = (req, res, next) => {
   const userId = req.currentUserId;
   PostPlant.find({ user: userId })
+  .populate('user')
     .then((posts) => {
       res.json(posts);
     })
