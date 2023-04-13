@@ -59,26 +59,3 @@ module.exports.delete = (req, res, next) => {
   .then(() =>  res.status(201).send("Bookmark eliminado correctamente"))
   .catch((err) => console.log(err))
 }
-
-
-// module.exports.listMyPlantsSaves = (req, res, next) => {
-//   Plant.find()
-//   .populate('save')
-//     .then((plants) => {
-//       res.status(StatusCodes.OK).json(plants);
-//     })
-//     .catch(next);
-//}
-
-// module.exports.listMyPlantsSaves = (req, res, next) => {
-//   const {user} = req.params
-//   Plant.find({user})
-//   .populate('plant')
-//     .then((saves) => {
-//       const filtered = saves.filter((fav) => {
-//         return fav.plant === false
-//      })
-//      res.status(201).json(filtered);
-//     })
-//     .catch(next);
-// }

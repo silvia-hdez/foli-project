@@ -36,9 +36,12 @@ module.exports.create = (req, res, next) => {
 
 module.exports.listPosts = (req, res, next) => {
   const userId = req.currentUserId;
+
   PostPlant.find({ user: { $ne: userId } })
-    .populate("user")
+
     .then((posts) => {
+      
+      console.log(posts[0])
       res.json(posts);
     })
     .catch(next);
@@ -65,25 +68,26 @@ module.exports.detailPost = (req, res, next) => {
 
 //---Eliminar post---//
 module.exports.delete = (req, res, next) => {
-  const { id } = req.params;
-  PostPlant.findByIdAndDelete(id)
-    .then(() => {})
-    .catch(next);
+  const { postId } = req.params;
+  PostPlant.findByIdAndDelete(postId)
+    .then(() => res.status(201).send("Post eliminado correctamente"))
+    .catch((err) => console.log(err));
 };
 
 //---Editar post---//
 module.exports.edit = (req, res, next) => {
-  const user = req.params.id;
+  const user = req.currentUserId
   const updates = {
     name: req.body.name,
     image: req.body.image,
-    state: req.body.state,
+
   };
   if (req.files) {
     updates.image = req.files.map((file) => file.path);
   }
   PostPlant.findById(user)
     .then((post) => {
+      
       if (!post) {
         res.status(StatusCodes.NOT_FOUND).send("Post no encontrado");
       } else if (post.user != req.currentUserId) {

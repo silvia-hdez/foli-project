@@ -49,5 +49,6 @@ postSchema.virtual("likes", {
   justOne: false,
 });
 
+
 const PostPlant = mongoose.model("PostPlant", postSchema);
 module.exports = PostPlant;
