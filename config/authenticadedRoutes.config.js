@@ -19,7 +19,7 @@ router.get("/plants/:id", plantsController.detailPlant);
 //---Bookmarks---//
 router.post("/plants/save/:plantId", plantsController.save);
 router.get("/save-plants", plantsController.listSavePlants);
-router.post("/saves/:saveId/delete", plantsController.delete);
+router.delete("/saves/:saveId", plantsController.delete);
 //router.get('/my-saves', plantsController.listMyPlantsSaves)
 
 //--- Post routes ---//

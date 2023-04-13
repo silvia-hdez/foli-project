@@ -44,7 +44,7 @@ module.exports.listSavePlants = (req, res, next) => {
   Save.find({ user: req.currentUserId })
     .populate("plant")
     .then(saves => {
-      const savesPlants = saves.map(save => save.plant);
+      const savesPlants = saves.map(save => save);
       
       res.status(200).json(savesPlants);
     })
@@ -54,7 +54,8 @@ module.exports.listSavePlants = (req, res, next) => {
 
 
 module.exports.delete = (req, res, next) => {
-  Save.findByIdAndDelete(req.params.saveId)
+  const { saveId } = req.params;
+  Save.findByIdAndDelete(saveId)
   .then(() =>  res.status(201).send("Bookmark eliminado correctamente"))
   .catch((err) => console.log(err))
 }
