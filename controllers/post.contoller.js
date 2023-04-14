@@ -38,10 +38,9 @@ module.exports.listPosts = (req, res, next) => {
   const userId = req.currentUserId;
 
   PostPlant.find({ user: { $ne: userId } })
-  .populate('user')
+    .populate("user")
     .then((posts) => {
-      
-      console.log(posts[0])
+      console.log(posts[0]);
       res.json(posts);
     })
     .catch(next);
@@ -50,7 +49,7 @@ module.exports.listPosts = (req, res, next) => {
 module.exports.listMyPosts = (req, res, next) => {
   const userId = req.currentUserId;
   PostPlant.find({ user: userId })
-  .populate('user')
+    .populate("user")
     .then((posts) => {
       res.json(posts);
     })
@@ -77,29 +76,25 @@ module.exports.delete = (req, res, next) => {
 
 //---Editar post---//
 module.exports.edit = (req, res, next) => {
-  const user = req.currentUserId
+  const {postId} = req.params
   const updates = {
     name: req.body.name,
     image: req.body.image,
-
+    description: req.body.description,
   };
   if (req.files) {
     updates.image = req.files.map((file) => file.path);
   }
-  PostPlant.findById(user)
-    .then((post) => {
-      
-      if (!post) {
-        res.status(StatusCodes.NOT_FOUND).send("Post no encontrado");
-      } else if (post.user != req.currentUserId) {
-        res.status(StatusCodes.UNAUTHORIZED).send("No autorizado para editar");
-      } else {
-        PostPlant.findByIdAndUpdate(user, updates)
-          .then(() => {
-            res.send("Post actualizado");
-          })
-          .catch(next);
-      }
-    })
-    .catch(next);
+
+  PostPlant.findByIdAndUpdate(postId, updates, {new: true} )
+  
+  .then((post) => {
+    console.log('el Post: ', post)
+    if (!post) {
+      res.status(StatusCodes.NOT_FOUND).send("Post no encontrado");
+    } else {
+      res.send(post);
+    }
+  })
+  .catch(next);
 };
