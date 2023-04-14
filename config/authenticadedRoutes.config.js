@@ -27,7 +27,7 @@ router.post("/new-post", upload.any(), postController.create);
 router.get("/posts", postController.listPosts);
 router.get("/my-posts", postController.listMyPosts);
 router.get("/posts/:id", postController.detailPost);
-router.post("/my-posts/:postId/edit", upload.array("image"), postController.edit);
+router.post("/my-posts/:postId/edit", upload.any(), postController.edit);
 router.delete("/posts/:postId", postController.delete);
 
 module.exports = router;
