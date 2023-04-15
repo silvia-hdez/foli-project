@@ -93,12 +93,6 @@ module.exports.edit = (req, res, next) => {
         date: new Date(),
       });
     });
-    // updates.image = req.files.map((file) => {
-    //   return {
-    //     url: file.path,
-    //     date: new Date()
-    //   }
-    // });
   }
 
   console.log(updates);
