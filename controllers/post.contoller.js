@@ -9,7 +9,12 @@ module.exports.create = (req, res, next) => {
   let images = [];
 
   if (req.files) {
-    images = req.files.map((file) => file.path);
+    images = req.files.map((file) => {
+      return {
+        url: file.path,
+        date: new Date(),
+      };
+    });
   }
 
   User.findById(req.currentUserId)
@@ -76,25 +81,38 @@ module.exports.delete = (req, res, next) => {
 
 //---Editar post---//
 module.exports.edit = (req, res, next) => {
-  const {postId} = req.params
+  const { postId } = req.params;
   const updates = {
     name: req.body.name,
-    image: req.body.image,
+    image: JSON.parse(req.body.image),
     description: req.body.description,
   };
   if (req.files) {
-    updates.image = req.files.map((file) => file.path);
+    req.files.forEach((file) => {
+      updates.image.push({
+        url: file.path,
+        date: new Date(),
+      });
+    });
+    // updates.image = req.files.map((file) => {
+    //   return {
+    //     url: file.path,
+    //     date: new Date()
+    //   }
+    // });
   }
 
-  PostPlant.findByIdAndUpdate(postId, updates, {new: true} )
-  
-  .then((post) => {
-    console.log('el Post: ', post)
-    if (!post) {
-      res.status(StatusCodes.NOT_FOUND).send("Post no encontrado");
-    } else {
-      res.send(post);
-    }
-  })
-  .catch(next);
+  console.log(updates);
+
+  PostPlant.findByIdAndUpdate(postId, updates, { new: true })
+
+    .then((post) => {
+      console.log("el Post: ", post);
+      if (!post) {
+        res.status(StatusCodes.NOT_FOUND).send("Post no encontrado");
+      } else {
+        res.send(post);
+      }
+    })
+    .catch(next);
 };

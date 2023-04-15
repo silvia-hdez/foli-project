@@ -28,14 +28,14 @@ module.exports.list = (req, res, next) => {
 //--- Obtener el usuario actual ---//
 
 module.exports.getCurrentUser = (req, res, next) => {
-  console.log("users/me");
+  //console.log("users/me");
   User.findById(req.currentUserId)
     .populate("posts")
     .populate("likes")
     .populate("saves")
     .then((user) => {
       if (!user) {
-        next(createError(StatusCodes.NOT_FOUND, "User not found"));
+        next(createError(StatusCodes.UNAUTHORIZED, "User not found"));
       } else {
         res.json(user);
       }

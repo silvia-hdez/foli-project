@@ -8,10 +8,17 @@ const postSchema = new mongoose.Schema(
       required: [true, REQUIRED_FIELD],
       default: null,
     },
-    image: {
-      type: [String],
-      required: [true, REQUIRED_FIELD],
-    },
+    image: [
+      {
+        url: {
+          type: String,
+          required: [true, REQUIRED_FIELD],
+        },
+        date: {
+          type: Date
+        },
+      },
+    ],
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
@@ -22,10 +29,6 @@ const postSchema = new mongoose.Schema(
     comments: {
       type: String,
     },
-    date: {
-      type: Date,
-      default: Date.now
-    }, 
     state: {
       type: String,
       enum: ["Insta", "Ayuda", "Solucionado", "Esqueje"],
@@ -52,7 +55,6 @@ postSchema.virtual("likes", {
   localField: "_id",
   justOne: false,
 });
-
 
 const PostPlant = mongoose.model("PostPlant", postSchema);
 module.exports = PostPlant;
