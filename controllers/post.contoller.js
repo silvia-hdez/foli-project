@@ -12,8 +12,7 @@ module.exports.create = (req, res, next) => {
     images = req.files.map((file) => {
       return {
         url: file.path,
-        date: new Date(),
-      };
+        date: new Date()}
     });
   }
 
@@ -84,7 +83,7 @@ module.exports.edit = (req, res, next) => {
   const { postId } = req.params;
   const updates = {
     name: req.body.name,
-    image: JSON.parse(req.body.image),
+    image: JSON.parse(req.body.image).map(singleImage => ({ ...singleImage, date: new Date(singleImage.date) })),
     description: req.body.description,
   };
   if (req.files) {
