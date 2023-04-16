@@ -21,7 +21,7 @@ module.exports.create = (req, res, next) => {
       if (!user) {
         return res.status(StatusCodes.NOT_FOUND).send("User no encontrado");
       }
-      return PostPlant.create({
+      const newPost = PostPlant.create({
         name,
         image: images,
         user,
@@ -29,8 +29,6 @@ module.exports.create = (req, res, next) => {
         comments,
         state,
       });
-    })
-    .then((newPost) => {
       res.status(StatusCodes.CREATED).json(newPost);
     })
     .catch(next);

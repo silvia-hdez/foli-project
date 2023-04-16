@@ -45,3 +45,4 @@ router.get("/logout", authController.logout);
 router.post('/new-comment', commentController.create)
 router.delete('/:commentId', commentController.deleteComment)
 router.patch('/:commentId', commentController.editComment)
+router.get('/comments', commentController.getComments)

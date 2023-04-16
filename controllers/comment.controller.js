@@ -34,10 +34,21 @@ module.exports.editComment = (req, res, next) => {
     .populate('user')
     .then((comment) => {
       if (comment.user._id.toString() === req.currentUserId) {
-        return Comment.findByIdAndUpdate(commentId, content, { new: true })
+        return Comment.findByIdAndUpdate(commentId, {content}, { new: true })
           .then((comment) => res.status(StatusCodes.OK).json(comment))
           .catch(next);
       }
     })
     .catch(next);
 };
+
+//---Traer los comentarios---//
+
+module.exports.getComments = (req, res, next) => {
+	const { postId } = req.params
+   
+	Comment.find({ post: postId })
+		.populate('user')
+		.then((comments) => res.json({ data: comments }))
+		.catch(next)
+}
