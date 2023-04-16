@@ -44,6 +44,17 @@ module.exports.getCurrentUser = (req, res, next) => {
     .catch(next);
 };
 
+//---Obtener info otro usuario---//
+
+module.exports.getInfoUser = (req, res, next) => {
+  const userId = req.params.userId
+  User.findById(userId)
+    .then((user)=>{
+      res.json(user)
+    })
+    .catch(next)
+}
+
 //---Editar usuario---//
 module.exports.edit = (req, res, next) => {
   if (req.file) {

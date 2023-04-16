@@ -8,6 +8,7 @@ module.exports.create = (req, res, next) => {
   const user = req.currentUserId;
   const { content } = req.body;
   const { postId } = req.params;
+  
   Comment.create({ content, user, postId })
     .then((newComment) => {
       res.status(StatusCodes.CREATED).json(newComment);

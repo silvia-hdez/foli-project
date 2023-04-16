@@ -17,6 +17,7 @@ router.post("/users/edit", upload.single("image"), usersController.edit);
 router.post('/users/:userId/follow', usersController.followUser)
 router.get("/users/:userId/following", usersController.getFollowing)
 router.get("/users/:userId/followers",	usersController.getFollowers)
+router.get('/users/:userId', usersController.getInfoUser)
 
 //--- Plants routes ---//
 router.get("/plants", plantsController.getAllPlants);

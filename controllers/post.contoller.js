@@ -64,6 +64,8 @@ module.exports.listMyPosts = (req, res, next) => {
 module.exports.detailPost = (req, res, next) => {
   const { id } = req.params;
   PostPlant.findById(id)
+  .populate('user')
+  .populate('comments')
     .then((post) => {
       res.json(post);
     })
