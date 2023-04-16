@@ -27,9 +27,10 @@ const postSchema = new mongoose.Schema(
     description: {
       type: String,
     },
-    comments: {
-      type: String,
-    },
+    comments: [{
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Comment'
+    }],
     state: {
       type: String,
       enum: ["Insta", "Ayuda", "Solucionado", "Esqueje"],

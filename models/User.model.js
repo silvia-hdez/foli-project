@@ -62,6 +62,18 @@ const userSchema = new mongoose.Schema(
       required: [true, REQUIRED_FIELD],
       minlength: [8, INVALID_LENGTH],
     },
+    following: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: "User",
+			},
+		],
+		followers: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: "User",
+			},
+		],
   },
   {
     timestamps: true,
@@ -86,6 +98,13 @@ userSchema.virtual("posts", {
 
 userSchema.virtual("saves", {
   ref: "Save",
+  foreignField: "user",
+  localField: "_id",
+  justOne: false,
+});
+
+userSchema.virtual("comments", {
+  ref: "Comment",
   foreignField: "user",
   localField: "_id",
   justOne: false,

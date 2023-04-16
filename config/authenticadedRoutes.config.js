@@ -7,10 +7,16 @@ const authMiddleware = require("../middelwares/auth.middelware");
 const plantsController = require("../controllers/plants.controller");
 
 const postController = require("../controllers/post.contoller.js");
+const commentController = require("../controllers/comment.controller")
 const upload = require("../config/storage.config");
+
+//---User routes---//
 
 router.get("/users/me", usersController.getCurrentUser);
 router.post("/users/edit", upload.single("image"), usersController.edit);
+router.post('/users/:userId/follow', usersController.followUser)
+router.get("/users/:userId/following", usersController.getFollowing)
+router.get("/users/:userId/followers",	usersController.getFollowers)
 
 //--- Plants routes ---//
 router.get("/plants", plantsController.getAllPlants);
@@ -34,3 +40,8 @@ module.exports = router;
 
 //---Logout---//
 router.get("/logout", authController.logout);
+
+//---Comments routes---//
+router.post('/new-comment', commentController.create)
+router.delete('/:commentId', commentController.deleteComment)
+router.patch('/:commentId', commentController.editComment)

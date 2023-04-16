@@ -43,6 +43,7 @@ module.exports.listPosts = (req, res, next) => {
 
   PostPlant.find({ user: { $ne: userId } })
     .populate("user")
+    .populate('comments')
     .then((posts) => {
       console.log(posts[0]);
       res.json(posts);
@@ -54,6 +55,7 @@ module.exports.listMyPosts = (req, res, next) => {
   const userId = req.currentUserId;
   PostPlant.find({ user: userId })
     .populate("user")
+    .populate('comments')
     .then((posts) => {
       res.json(posts);
     })
@@ -95,10 +97,8 @@ module.exports.edit = (req, res, next) => {
     });
   }
 
-  console.log(updates);
-
   PostPlant.findByIdAndUpdate(postId, updates, { new: true })
-
+    .populate('comments')
     .then((post) => {
       console.log("el Post: ", post);
       if (!post) {

@@ -33,6 +33,7 @@ module.exports.getCurrentUser = (req, res, next) => {
     .populate("posts")
     .populate("likes")
     .populate("saves")
+    .populate("comments")
     .then((user) => {
       if (!user) {
         next(createError(StatusCodes.UNAUTHORIZED, "User not found"));
@@ -54,3 +55,72 @@ module.exports.edit = (req, res, next) => {
     })
     .catch(next);
 };
+
+//---Tener un seguidor y seguir a otro---//
+
+module.exports.followUser = (req, res, next) => {
+	const { userId } = req.params
+	User.findByIdAndUpdate(
+		userId,
+		{ $push: { followers: req.currentUserId } },
+		{ new: true }
+	)
+		.then((user) => {
+			if (!user) {
+				return createError(StatusCodes.NOT_FOUND, "User not found")
+			} else {
+				User.findByIdAndUpdate(
+					req.currentUserId,
+					{ $push: { following: userId } },
+					{ new: true }
+				)
+					.then((user) => {
+						if (!user) {
+							return createError(StatusCodes.NOT_FOUND, "User not found")
+						} else {
+							res.status(200).json(user)
+						}
+					})
+					.catch(next)
+			}
+		})
+		.catch(next)
+}
+
+//---Listado de usuarios a los que sigo---//
+
+module.exports.getFollowing = (req, res, next) => {
+	const { userId } = req.params
+	User.findById(userId)
+		.populate("following", "username img ")
+		.select("following")
+		.then((user) => {
+			if (!user) {
+				return createError(StatusCodes.NOT_FOUND, "User not found")
+			} else {
+				res.json({
+					following: user.following,
+				})
+			}
+		})
+		.catch(next)
+}
+
+//---Listado de usuarios que me siguen---//
+
+module.exports.getFollowers = (req, res, next) => {
+	const { userId } = req.params
+	User.findById(userId)
+		.populate("followers")
+		.select("followers")
+		.then((user) => {
+			if (!user) {
+				return createError(StatusCodes.NOT_FOUND, "User not found")
+			} else {
+				res.json({
+					followers: user.followers,
+				})
+			}
+		})
+		.catch(next)
+}
