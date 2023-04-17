@@ -83,10 +83,12 @@ module.exports.delete = (req, res, next) => {
 //---Editar post---//
 module.exports.edit = (req, res, next) => {
   const { postId } = req.params;
+  console.log('UPDATE BODY', req.body)
   const updates = {
-    name: req.body.name,
-    image: JSON.parse(req.body.image).map(singleImage => ({ ...singleImage, date: new Date(singleImage.date) })),
-    description: req.body.description,
+    ...(req.body.name !== undefined) && {name: req.body.name},
+   ...(req.body.image !== undefined) &&{image: JSON.parse(req.body.image).map(singleImage => ({ ...singleImage, date: new Date(singleImage.date) }))},
+    ...(req.body.description !== undefined) &&{description: req.body.description},
+    ...(req.body.comments !== undefined) && {comments: req.body.comments} 
   };
   if (req.files) {
     req.files.forEach((file) => {
@@ -96,7 +98,7 @@ module.exports.edit = (req, res, next) => {
       });
     });
   }
-
+  console.log('POST TO UPDATE', updates)
   PostPlant.findByIdAndUpdate(postId, updates, { new: true })
     .populate('comments')
     .then((post) => {

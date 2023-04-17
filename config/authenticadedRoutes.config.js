@@ -15,6 +15,7 @@ const upload = require("../config/storage.config");
 router.get("/users/me", usersController.getCurrentUser);
 router.post("/users/edit", upload.single("image"), usersController.edit);
 router.post('/users/:userId/follow', usersController.followUser)
+router.post('/users/:userId/unFollow', usersController.unFollowUser)
 router.get("/users/:userId/following", usersController.getFollowing)
 router.get("/users/:userId/followers",	usersController.getFollowers)
 router.get('/users/:userId', usersController.getInfoUser)

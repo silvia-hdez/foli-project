@@ -9,7 +9,8 @@ const commentSchema = new mongoose.Schema({
     type: mongoose.Types.ObjectId,
     ref: "PostPlant",
   },
-  content: String
+  content:{ 
+    type: String}
 }, {
   timestamps: true,
   toJSON: {
