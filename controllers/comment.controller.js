@@ -8,7 +8,7 @@ module.exports.create = (req, res, next) => {
   const user = req.currentUserId;
   const { content, postId } = req.body;
 
-  Comment.create({ content, user  , post: postId })
+  Comment.create({ content, user , post: postId })
 
     .then((newComment) => {
       console.log(newComment);
@@ -29,10 +29,12 @@ module.exports.deleteComment = (req, res, next) => {
 //---Editar comentarios---//
 
 module.exports.editComment = (req, res, next) => {
+
   const { commentId } = req.params;
   const { content } = req.body;
 
   Comment.findById(commentId)
+
     .populate("user")
     .then((comment) => {
       if (comment.user._id.toString() === req.currentUserId) {
