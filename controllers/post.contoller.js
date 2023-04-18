@@ -65,7 +65,10 @@ module.exports.detailPost = (req, res, next) => {
   const { id } = req.params;
   PostPlant.findById(id)
   .populate('user')
-  .populate('comments')
+  .populate({
+    path:'comments',
+    populate:'user',
+  })
     .then((post) => {
       res.json(post);
     })

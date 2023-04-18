@@ -48,6 +48,7 @@ module.exports.getCurrentUser = (req, res, next) => {
 module.exports.getInfoUser = (req, res, next) => {
   const { userId } = req.params;
   User.findById(userId)
+  
     .then((user) => {
       res.json(user);
     })
