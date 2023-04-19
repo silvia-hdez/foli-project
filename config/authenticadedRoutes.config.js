@@ -28,7 +28,10 @@ router.get("/plants/:id", plantsController.detailPlant);
 router.post("/plants/save/:plantId", plantsController.save);
 router.get("/save-plants", plantsController.listSavePlants);
 router.delete("/saves/:saveId", plantsController.delete);
-//router.get('/my-saves', plantsController.listMyPlantsSaves)
+
+router.post("/posts/save/:postId", postController.save);
+router.get("/save-posts", postController.listSavePost);
+router.delete("/posts/:saveId", postController.delete);
 
 //--- Post routes ---//
 router.post("/new-post", upload.any(), postController.create);
@@ -37,6 +40,7 @@ router.get("/my-posts", postController.listMyPosts);
 router.get("/posts/:id", postController.detailPost);
 router.patch("/posts/:postId", upload.any(), postController.edit);
 router.delete("/posts/:postId", postController.delete);
+
 
 module.exports = router;
 

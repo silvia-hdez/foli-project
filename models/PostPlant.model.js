@@ -7,6 +7,7 @@ const postSchema = new mongoose.Schema(
       type: String,
       required: [true, REQUIRED_FIELD],
       default: null,
+      maxlength: [24, 'Máxima longitud 24 caracteres'],
     },
     image: [
       {

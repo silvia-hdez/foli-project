@@ -1,7 +1,7 @@
 const { StatusCodes } = require("http-status-codes");
 const PostPlant = require("../models/PostPlant.model");
 const User = require("../models/User.model");
-
+const Save = require('../models/Save.model')
 //---Crear post--//
 
 module.exports.create = (req, res, next) => {
@@ -60,6 +60,44 @@ module.exports.listMyPosts = (req, res, next) => {
     .catch(next);
 };
 
+//---Posts bookmarks---//
+
+module.exports.save = (req, res, next) => {
+  const { postId } = req.params;
+  console.log(postId)
+  const newSave = new Save({ user: req.currentUserId, post: postID });
+
+  newSave
+    .save()
+    .then((savedPost) => {
+      console.log(savedPost)
+      res.status(201).json(savedPost);
+    }
+   )
+    .catch((err) => res.status(500).send(err.message));
+};
+
+module.exports.listSavePost = (req, res, next) => {
+
+  Save.find({ user: req.currentUserId })
+    .populate("post")
+    .then(saves => {
+      const savesPosts = saves.map(save => save);
+      
+      res.status(200).json(savesPosts);
+    })
+    .catch(next);
+    
+};
+
+
+module.exports.delete = (req, res, next) => {
+  const { saveId } = req.params;
+  Save.findByIdAndDelete(saveId)
+  .then(() =>  res.status(201).send("Bookmark eliminado correctamente"))
+  .catch((err) => console.log(err))
+}
+
 //---Detalle del post---//
 module.exports.detailPost = (req, res, next) => {
   const { id } = req.params;
@@ -79,7 +117,7 @@ module.exports.detailPost = (req, res, next) => {
 module.exports.delete = (req, res, next) => {
   const { postId } = req.params;
   PostPlant.findByIdAndDelete(postId)
-    .then(() => res.status(201).send("Post eliminado correctamente"))
+    .then(() => res.status(StatusCodes.OK).json())
     .catch((err) => console.log(err));
 };
 
