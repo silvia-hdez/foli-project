@@ -13,16 +13,6 @@ mongoose
     
   })
 
-  // .then(() => {
-  //   Plant.insertMany(plantsJSON)
-  //     .then(() => {
-  //       return Plant.create(plant)
-  //         .then((res)=> {
-  //           console.log(res.commonName)
-  //         })
-  //     })
-  //     .catch((err) => console.log(err));
-  // })
   .catch((error) => {
     console.error(
       `An error ocurred trying to connect to de database ${DB_URI}`,
