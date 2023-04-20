@@ -31,7 +31,7 @@ router.delete("/saves/:saveId", plantsController.delete);
 
 router.post("/posts/save/:postId", postController.save);
 router.get("/save-posts", postController.listSavePost);
-router.delete("/posts/:saveId", postController.delete);
+router.delete("/posts/:postId", postController.delete);
 
 //--- Post routes ---//
 router.post("/new-post", upload.any(), postController.create);

@@ -44,8 +44,7 @@ module.exports.listSavePlants = (req, res, next) => {
   Save.find({ user: req.currentUserId })
     .populate("plant")
     .then(saves => {
-      const savesPlants = saves.map(save => save);
-      
+      const savesPlants = saves.filter(save => save.plant !== undefined);
       res.status(200).json(savesPlants);
     })
     .catch(next);

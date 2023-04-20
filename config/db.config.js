@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const DB_NAME = "InstaPlant";
-const URI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017";
+const URI = process.env.ENV === "PROD" ? process.env.MONGODB_URI : "mongodb://127.0.0.1:27017";
+console.log('ENV', process.env.ENV)
 const DB_URI = `${URI}/${DB_NAME}`;
 const plantsJSON = require('../plants.json');
 const Plant = require("../models/Plant.model");

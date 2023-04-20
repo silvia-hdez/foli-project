@@ -39,11 +39,11 @@ module.exports.create = (req, res, next) => {
 module.exports.listPosts = (req, res, next) => {
   const userId = req.currentUserId;
 
-  PostPlant.find({ user: { $ne: userId } })
-    .populate("user")
-    .populate('comments')
+  PostPlant.find()
+    //.populate("user")
+    //.populate('comments')
     .then((posts) => {
-      console.log(posts[0]);
+      console.log(posts);
       res.json(posts);
     })
     .catch(next);
@@ -65,7 +65,7 @@ module.exports.listMyPosts = (req, res, next) => {
 module.exports.save = (req, res, next) => {
   const { postId } = req.params;
   console.log(postId)
-  const newSave = new Save({ user: req.currentUserId, post: postID });
+  const newSave = new Save({ user: req.currentUserId, post: postId });
 
   newSave
     .save()
@@ -82,8 +82,8 @@ module.exports.listSavePost = (req, res, next) => {
   Save.find({ user: req.currentUserId })
     .populate("post")
     .then(saves => {
-      const savesPosts = saves.map(save => save);
-      
+      const savesPosts = saves.filter(save => save.post !== undefined);
+
       res.status(200).json(savesPosts);
     })
     .catch(next);
@@ -116,8 +116,12 @@ module.exports.detailPost = (req, res, next) => {
 //---Eliminar post---//
 module.exports.delete = (req, res, next) => {
   const { postId } = req.params;
+  console.log(postId)
   PostPlant.findByIdAndDelete(postId)
-    .then(() => res.status(StatusCodes.OK).json())
+    .then((resp) => {
+      console.log(resp)
+      res.status(StatusCodes.OK).json()
+    })
     .catch((err) => console.log(err));
 };
 

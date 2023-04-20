@@ -12,6 +12,7 @@ module.exports.create = (req, res, next) => {
       res.status(StatusCodes.CREATED).json(userCreated);
     })
     .catch((err) => {
+      console.log(err)
       res.status(StatusCodes.CONFLICT).json(err);
     });
 };
