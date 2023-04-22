@@ -41,7 +41,7 @@ module.exports.login = (req, res, next) => {
             { id: user.id },
             process.env.JWT_SECRET || 'test',
             {
-              expiresIn: '1h'
+              expiresIn: process.env.ENV === "PROD" ? '1h' : '24h'
             }
           )
 
