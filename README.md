@@ -14,14 +14,6 @@
 `npm run start`
 
 
-## TODO
-- ~~Verificar que el userName y el teléfono no existen.~~
-- ~~Meter foto al usuario. Modificar el perfil. ~~
-~~En la ruta de editar perfil, meter 'upload.single('image')~~
-- ~~Lógicas para hacer el guardado de las fichas de plantas
-Cómo relacionar el modelo 'User' con 'Plants'~~
 
-## PROBLEMAS
-- ~~No se enlaza cloudinary~~
 
 

@@ -5,7 +5,10 @@ const Save = require("../models/Save.model");
 module.exports.getAllPlants = (req, res, next) => {
   Plant.find()
     .then((plants) => {
-      res.status(StatusCodes.OK).json(plants);
+      res.status(StatusCodes.OK).json(plants.map((x) => {
+        x.commonName = x.commonName[0].toUpperCase() + x.commonName.slice(1)
+        return x
+      }));
     })
     .catch(next);
 };

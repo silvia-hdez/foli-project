@@ -42,7 +42,7 @@ const userSchema = new mongoose.Schema(
     image: {
       type: String,
       default:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2fO4H8Kki0fRxRgp12i-W56CjJge_NwkNzA&usqp=CAU",
+        "https://www.4x4.ec/overlandecuador/wp-content/uploads/2017/06/default-user-icon-8.jpg",
     },
     email: {
       type: String,
