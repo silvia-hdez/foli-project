@@ -18,7 +18,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: process.env.ENV === "PROD" ? "*" : "http://localhost:5173",
+    origin: process.env.ENV === "PROD" ? "*" : "http://localhost:5173",  // TODO quitar wildcard y poner dominio de netlify
   })
 );
 

@@ -39,8 +39,8 @@ module.exports.create = (req, res, next) => {
 module.exports.listPosts = (req, res, next) => {
   const userId = req.currentUserId;
 
-  PostPlant.find()
-    //.populate("user")
+  PostPlant.find({ user: { $ne: userId } })
+    .populate("user")
     //.populate('comments')
     .then((posts) => {
       console.log(posts);
