@@ -12,7 +12,7 @@ module.exports.create = (req, res, next) => {
       res.status(StatusCodes.CREATED).json(userCreated);
     })
     .catch((err) => {
-      console.log(err)
+      console.log(err);
       res.status(StatusCodes.CONFLICT).json(err);
     });
 };
@@ -31,13 +31,13 @@ module.exports.getCurrentUser = (req, res, next) => {
   //console.log("users/me");
   User.findById(req.currentUserId)
     .populate("posts")
-    .populate("likes")
     .populate("saves")
     .populate("comments")
     .then((user) => {
       if (!user) {
         next(createError(StatusCodes.UNAUTHORIZED, "User not found"));
       } else {
+        console.log('AQUI', JSON.stringify(user))
         res.json(user);
       }
     })
@@ -49,7 +49,7 @@ module.exports.getCurrentUser = (req, res, next) => {
 module.exports.getInfoUser = (req, res, next) => {
   const { userId } = req.params;
   User.findById(userId)
-    .populate("posts  ")
+    .populate("posts")
     .then((user) => {
       res.json(user);
     })
@@ -135,15 +135,12 @@ module.exports.unFollowUser = (req, res, next) => {
 module.exports.getFollowing = (req, res, next) => {
   const { userId } = req.params;
   User.findById(userId)
-    .populate("following", "username img ")
-    .select("following")
+    .populate("following")
     .then((user) => {
       if (!user) {
         return createError(StatusCodes.NOT_FOUND, "User not found");
       } else {
-        res.json({
-          following: user.following,
-        });
+        res.json(user.following);
       }
     })
     .catch(next);
@@ -155,14 +152,11 @@ module.exports.getFollowers = (req, res, next) => {
   const { userId } = req.params;
   User.findById(userId)
     .populate("followers")
-    .select("followers")
     .then((user) => {
       if (!user) {
         return createError(StatusCodes.NOT_FOUND, "User not found");
       } else {
-        res.json({
-          followers: user.followers,
-        });
+        res.json(user.followers);
       }
     })
     .catch(next);
