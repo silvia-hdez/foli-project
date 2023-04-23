@@ -6,7 +6,7 @@ const apiUrl = "https://perenual.com/api";
 const apiKey = process.env.API_KEY;
 const Plant = require("../../models/Plant.model");
 const plantsJSON = require('../../plants.json')
-const PLANTS_LIMIT = 200;
+const PLANTS_LIMIT = 2;
 
 const http = axios.create({
   baseURL: apiUrl,
@@ -61,39 +61,45 @@ const getRandomPlants = () => {
   });
 }
 
-
+const exisitingUrls =[]
 getRandomPlants()
   .then((plants) => {
     plants.map((plant) => {
       if(plant.image || plant.default_image?.medium_url){
-      Plant.create({
-        commonName: plant.common_name || plant.commonName,
-        image: plant.default_image ? plant.default_image.medium_url : plant.image,
-        scientificName: plant.scientific_name || plant.scientificName,
-        cycle: plant.cycle,
-        watering: plant.watering,
-        sunlight: plant.sunlight,
-        family: plant.family,
-        origin: plant.origin,
-        attracts: plant.attracts,
-        propagation: plant.propagation,
-        soil:plant.soil,
-        growthRate: plant.growth_rate || plant.growthRate,
-        droughtTolerant: plant.drought_tolerant || plant.droughtTolerant,
-        maintenance: plant.maintenance,
-        thorny: plant.thorny,
-        invasive: plant.invasive,
-        tropical: plant.tropical,
-        indoor: plant.indoor,
-        flowers: plant.flowers,
-        fruits: plant.fruits,
-        cuisine: plant.cuisine
-      })
-        .then((res) => {
-          //console.log(res);
           
-        })
-        .catch((err) => console.log(err));}
+         if ((plant.image && !exisitingUrls.includes(plant.image)) || (plant.default_image?.medium_url &&  !exisitingUrls.includes(plant.default_image.medium_url))) {
+          Plant.create({
+            commonName: plant.common_name || plant.commonName,
+            image: plant.default_image ? plant.default_image.medium_url : plant.image,
+            scientificName: plant.scientific_name || plant.scientificName,
+            cycle: plant.cycle,
+            watering: plant.watering,
+            sunlight: plant.sunlight,
+            family: plant.family,
+            origin: plant.origin,
+            attracts: plant.attracts,
+            propagation: plant.propagation,
+            soil:plant.soil,
+            growthRate: plant.growth_rate || plant.growthRate,
+            droughtTolerant: plant.drought_tolerant || plant.droughtTolerant,
+            maintenance: plant.maintenance,
+            thorny: plant.thorny,
+            invasive: plant.invasive,
+            tropical: plant.tropical,
+            indoor: plant.indoor,
+            flowers: plant.flowers,
+            fruits: plant.fruits,
+            cuisine: plant.cuisine
+          })
+            .then((res) => {
+              //console.log(res);
+            })
+            .catch((err) => console.log(err));
+            exisitingUrls.push(plant.image || plant.default_image.medium_url)
+          }
+
+         }
+
     });
     //.then(mongoose.disconnect())
 
