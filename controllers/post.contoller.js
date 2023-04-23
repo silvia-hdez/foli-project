@@ -127,9 +127,7 @@ module.exports.delete = (req, res, next) => {
 
 //---Editar post---//
 module.exports.edit = (req, res, next) => {
-  console.log('AQUI')
   const { postId } = req.params;
-  console.log('UPDATE BODY', req.body)
   const updates = {
     ...(req.body.name !== undefined) && {name: req.body.name},
    ...(req.body.image !== undefined) &&{image: JSON.parse(req.body.image).map(singleImage => ({ ...singleImage, date: new Date(singleImage.date) }))},

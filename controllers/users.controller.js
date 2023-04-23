@@ -37,7 +37,6 @@ module.exports.getCurrentUser = (req, res, next) => {
       if (!user) {
         next(createError(StatusCodes.UNAUTHORIZED, "User not found"));
       } else {
-        console.log('AQUI', JSON.stringify(user))
         res.json(user);
       }
     })
