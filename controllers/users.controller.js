@@ -13,7 +13,12 @@ module.exports.create = (req, res, next) => {
     })
     .catch((err) => {
       console.log(err);
-      res.status(StatusCodes.CONFLICT).json(err);
+      if (err["code"] === 11000) {
+        res.status(StatusCodes.CONFLICT).json(err["keyValue"]);
+      }
+      else {
+        res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(err);
+      }
     });
 };
 
