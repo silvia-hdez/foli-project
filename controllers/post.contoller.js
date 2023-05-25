@@ -80,7 +80,11 @@ module.exports.save = (req, res, next) => {
 module.exports.listSavePost = (req, res, next) => {
 
   Save.find({ user: req.currentUserId })
-    .populate("post")
+    .populate("user")
+    .populate({
+      path:'post',
+      populate:'user',
+    })
     .then(saves => {
       const savesPosts = saves.filter(save => save.post !== undefined);
 
@@ -102,7 +106,7 @@ module.exports.delete = (req, res, next) => {
 module.exports.detailPost = (req, res, next) => {
   const { id } = req.params;
   PostPlant.findById(id)
-  .populate('user')
+  .populate("user")
   .populate({
     path:'comments',
     populate:'user',
